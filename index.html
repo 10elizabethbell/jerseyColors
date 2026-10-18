@@ -505,6 +505,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     return true;
   }
 
+  JC.scene = function () { return { s: s, ox: ox, oy: oy }; };
   function toScene(c) { c.setTransform(dpr * s, 0, 0, dpr * s, dpr * ox, dpr * oy); }
 
   function drawBase() {
