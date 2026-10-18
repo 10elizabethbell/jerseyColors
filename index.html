@@ -30,7 +30,7 @@
   --r:18px;
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;overscroll-behavior-y:none;scroll-behavior:smooth;scroll-padding-top:72px}
+html{-webkit-text-size-adjust:100%;overscroll-behavior-y:none;scroll-behavior:smooth;scroll-padding-top:16px}
 body{margin:0;background:var(--cream);color:var(--ink);font:400 17px/1.55 var(--body);overflow-x:hidden}
 ::selection{background:var(--gold);color:var(--plum)}
 input,textarea,select{caret-color:var(--teal)}
@@ -44,12 +44,12 @@ h2{font-size:clamp(34px,9vw,60px);text-transform:uppercase}
 html{scrollbar-color:var(--plum) var(--cream)}
 
 /* ===== Header ===== */
-.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:8px;padding:10px var(--gutter);background:rgba(252,235,215,.94);-webkit-backdrop-filter:saturate(1.2) blur(10px);backdrop-filter:saturate(1.2) blur(10px)}
+.top{position:relative;z-index:20;display:flex;align-items:center;gap:8px;padding:10px var(--gutter);background:var(--cream)}
 .brand{display:flex;align-items:center;gap:8px;text-decoration:none;margin-right:auto;min-height:44px}
 .brand img{width:42px;height:42px;border-radius:10px}
 .wm{display:flex;flex-direction:column;line-height:1;font-family:var(--display);text-transform:uppercase}
 .wm b{font-weight:900;font-size:21px;letter-spacing:.01em;color:var(--ink)}
-.wm small{font-weight:800;font-size:9.5px;letter-spacing:.04em;color:var(--orange-text);margin-top:3px}
+.wm small{font-weight:800;font-size:10.5px;letter-spacing:.04em;color:var(--orange-text);margin-top:3px}
 .lang{appearance:none;border:0;background:none;font:800 14px/1 var(--display);color:var(--ink-soft);min-width:44px;min-height:44px;padding:0 6px;border-radius:10px;cursor:pointer;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:.25em}
 .lang:hover{color:var(--teal)}
 .lang .long{display:none}
@@ -64,7 +64,7 @@ html{scrollbar-color:var(--plum) var(--cream)}
 .hero h1 .c{color:var(--orange-text)}
 .promise{font-size:clamp(17px,4.6vw,20px);max-width:34ch;margin:14px 0 20px;color:var(--ink-soft)}
 .cta{display:grid;gap:10px}
-.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 24px;border-radius:999px;font:900 17px/1 var(--display);text-transform:uppercase;letter-spacing:.02em;text-decoration:none;border:2.5px solid var(--orange-deep);cursor:pointer;transition:background-color .2s,color .2s,border-color .2s,transform .15s}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 24px;border-radius:999px;font:900 17px/1.12 var(--display);text-transform:uppercase;letter-spacing:.02em;text-align:center;text-wrap:balance;padding-block:10px;text-decoration:none;border:2.5px solid var(--orange-deep);cursor:pointer;transition:background-color .2s,color .2s,border-color .2s,transform .15s}
 .btn:active{transform:translateY(1px)}
 .btn.primary{background:var(--orange-deep);color:var(--paper);box-shadow:0 8px 18px -10px rgba(185,82,10,.8)}
 .btn.primary:hover{background:#a24707;border-color:#a24707}
@@ -72,14 +72,14 @@ html{scrollbar-color:var(--plum) var(--cream)}
 .btn.ghost:hover{background:var(--plum);color:var(--cream)}
 .btn svg{width:20px;height:20px;flex:none}
 
-.scene{position:relative;margin:0;height:clamp(320px,92vw,420px)}
+.scene{position:relative;margin:0;height:clamp(340px,100vw,440px)}
 .scene canvas{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;cursor:none}
 .tools{position:absolute;left:var(--gutter);right:var(--gutter);bottom:12px;display:flex;align-items:center;gap:8px;z-index:3;pointer-events:none}
 .swatch{pointer-events:auto;appearance:none;width:44px;height:44px;border-radius:50%;border:3px solid var(--cream);background:var(--c);cursor:pointer;box-shadow:0 4px 10px -4px rgba(20,12,24,.55);transition:transform .2s cubic-bezier(.2,.9,.3,1.4)}
 .swatch[aria-checked="true"]{transform:scale(1.12);border-color:var(--plum);box-shadow:0 0 0 3px var(--cream),0 6px 14px -4px rgba(20,12,24,.6)}
 .swatch:hover{transform:scale(1.08)}
 .swatch[aria-checked="true"]:hover{transform:scale(1.12)}
-.hint{margin:0 0 0 6px;font:800 16px/1.1 var(--display);color:var(--cream);text-shadow:0 1px 2px rgba(30,40,10,.5)}
+.hint{margin:0 0 0 6px;font:800 19px/1.1 var(--display);white-space:nowrap;color:var(--cream);text-shadow:0 1px 3px rgba(20,28,8,.8)}
 
 /* ===== Seams (painted section edges) ===== */
 .seam{display:block;height:34px;position:relative;z-index:1}
@@ -90,7 +90,6 @@ html{scrollbar-color:var(--plum) var(--cream)}
 .services h2{color:var(--plum);margin-bottom:18px}
 .rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
 .row{display:flex;align-items:center;gap:14px;min-height:72px;padding:12px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);-webkit-tap-highlight-color:transparent}
-.rows li:first-child .row{border-top:0}
 .row .dot{width:16px;height:16px;border-radius:50% 46% 52% 48%;background:var(--c);flex:none;box-shadow:inset 0 -2px 3px rgba(0,0,0,.18)}
 .row .name{font:900 clamp(22px,6.2vw,32px)/1.05 var(--display);text-transform:uppercase;letter-spacing:-.01em;margin-right:auto}
 .arrow{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;flex:none;background:rgba(51,34,63,.08);color:var(--plum);transition:background-color .2s,color .2s,transform .2s}
@@ -113,9 +112,11 @@ html{scrollbar-color:var(--plum) var(--cream)}
 .work h2{margin-bottom:22px}
 .latest{margin:0 0 28px;padding:0;max-width:30ch}
 .latest p{margin:0;font:800 clamp(24px,6.6vw,40px)/1.15 var(--display);letter-spacing:-.01em;text-wrap:balance}
+.latest p em{font-style:normal;color:#ffd36b}
 .latest cite{display:block;margin-top:14px;font:700 15px/1.3 var(--body);font-style:normal;color:#cfe3e2;letter-spacing:.02em}
 .fb{display:flex;align-items:center;justify-content:center;gap:12px;min-height:60px;padding:10px 22px;text-align:center;border-radius:999px;background:var(--cream);color:var(--teal-ink);font:900 clamp(15px,4.2vw,18px)/1.1 var(--display);text-transform:uppercase;text-decoration:none;border:2.5px solid var(--cream);box-shadow:0 10px 22px -12px rgba(0,0,0,.6);transition:background-color .2s,color .2s}
 .fb svg{width:24px;height:24px;flex:none}
+.fb span{text-wrap:balance}
 .fb:hover{background:var(--gold);border-color:var(--gold);color:var(--plum)}
 
 /* ===== Quote form ===== */
@@ -150,16 +151,14 @@ input[type=text]:hover,textarea:hover,select:hover,input[type=text]:focus,textar
 .done p{margin:0 0 10px}
 .done pre{white-space:pre-wrap;font:400 16px/1.5 var(--body);background:var(--cream);padding:14px;border-radius:12px;margin:0 0 12px}
 .done a{font-weight:800;color:var(--teal)}
+.done .btn{margin-top:4px;min-height:48px;font-size:15px}
+.done .row2{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
 
 /* ===== Close + footer ===== */
 .close{background:var(--plum);color:var(--cream);padding:44px 0 56px}
 .close h2{font-size:clamp(38px,11vw,84px);margin-bottom:18px}
 .close h2 .c{color:var(--gold)}
-.close p{margin:0 0 26px;max-width:42ch;color:#e9d6e8;font-size:18px}
-.big-phone{display:inline-flex;flex-direction:column;gap:6px;text-decoration:none}
-.big-phone b{font:900 clamp(34px,10vw,64px)/1 var(--display);color:var(--gold);letter-spacing:-.01em}
-.big-phone span{font:800 15px/1 var(--display);text-transform:uppercase;letter-spacing:.06em;color:#c9b7c9}
-.big-phone:hover b{text-decoration:underline;text-decoration-thickness:3px}
+.close p{margin:0;max-width:42ch;color:#e9d6e8;font-size:18px}
 footer{background:var(--plum-2);color:#c9b7c9;padding:28px 0 calc(28px + env(safe-area-inset-bottom));font-size:16px}
 footer .wrap{display:grid;gap:10px}
 footer strong{color:var(--cream);font-family:var(--display);font-weight:900;font-size:18px}
@@ -172,6 +171,7 @@ footer nav a{min-height:44px;display:inline-flex;align-items:center}
 @media (min-width:600px){
   :root{--gutter:28px}
   .cta{grid-template-columns:auto auto;justify-content:start}
+  .cta .btn{white-space:nowrap}
   .seam{height:48px}
   .wm small{font-size:11px}.wm b{font-size:24px}
   .lang .long{display:inline}.lang .short{display:none}
@@ -184,16 +184,27 @@ footer nav a{min-height:44px;display:inline-flex;align-items:center}
   :root{--gutter:40px}
   .phone{font-size:18px}
   .hero{min-height:min(820px,calc(100svh - 64px));display:flex;align-items:center}
-  .hero-copy{max-width:640px;padding:40px 0 140px var(--gutter);margin-left:max(0px,calc((100vw - 1180px)/2))}
+  .hero-copy{max-width:min(640px,44vw);padding:40px 0 140px var(--gutter);margin-left:max(0px,calc((100vw - 1180px)/2))}
   .scene{position:absolute;inset:0;height:auto}
   .tools{left:auto;right:var(--gutter);bottom:20px;width:auto}
-  .services .wrap{display:grid;grid-template-columns:5fr 7fr;gap:60px;align-items:start}
-  .services h2{position:sticky;top:110px}
+  .rows{display:grid;grid-template-columns:1fr 1fr;column-gap:60px;border-top:0}
+  .row{border-top:1px solid var(--line)}
+  .services h2{margin-bottom:28px}
   .row{min-height:84px}
-  .work .wrap{display:grid;grid-template-columns:7fr 5fr;gap:60px;align-items:end}
-  .latest{margin:0}
+  .latest{max-width:24ch}
+  .latest p{font-size:clamp(24px,3.6vw,52px)}
+  .fb{display:inline-flex;margin-top:28px}
   .quote .wrap{display:grid;grid-template-columns:5fr 7fr;gap:60px;align-items:start}
   .chips{max-width:560px}
+}
+@media (max-width:380px){
+  .hint{font-size:17px;margin-left:2px}
+  .tools [role=radiogroup]{gap:6px !important}
+}
+@media (max-width:350px){
+  .wm small{display:none}
+  .phone svg{display:none}
+  .phone{font-size:14px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -204,10 +215,10 @@ footer nav a{min-height:44px;display:inline-flex;align-items:center}
 <body>
 <!--
 THESIS: The visitor paints a New Jersey house front in the logo's colors, the way the crew just did in Monmouth County. Refuses the contractor template of a stock hero photo, badges and a service-card grid.
-OWN-WORLD: The logo's world: cream ground, thick rounded plum roofline, gold brush with plum ferrule, orange/gold/teal arches, clapboard siding with lap shadows, lawn green. Rounded heavy uppercase type. Section edges are wet brush strokes with dry-brush streaks.
+OWN-WORLD: The logo's world: cream ground, thick rounded plum roofline, gold brush with plum ferrule, orange/gold/teal arches, clapboard siding with lap shadows, lawn green. Heavy uppercase system type (SF Pro Rounded on Apple devices via ui-rounded; plain system heavy elsewhere, per the owner's system-font rule). Section edges are ragged wet brush edges.
 STORY: Who they are (painting and floors, Long Branch NJ), that they treat your home like their own, how a job goes, where to see more work, then text a quote request or call.
-FIRST VIEWPORT: Phone: header (logo mark + wordmark, ES toggle, phone top-right), two-line uppercase headline, one-line promise, Get a quote (filled) and Text us a photo (outlined), then the house being brushed full width with paint swatches on the lawn. Desktop: copy left in clear cream sky, house right.
-FORM: Painted house front, choice 1 of 7 (runner-up: hardwood floor refinishing). Unattended build, no seed key.
+FIRST VIEWPORT: Phone: header (logo mark + wordmark, ES toggle, phone top-right), four-line uppercase headline (plum, then orange), three-line promise, Get a quote (filled) and Text us a photo (outlined), then the house being brushed full width with paint swatches on the lawn. Desktop: copy left in clear cream sky, house right.
+FORM: Painted house front, choice 1 of 7 (runner-up: hardwood floor refinishing). Unattended build: the concept roll was skipped, so there is no seed key.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 -->
 <header class="top">
@@ -223,7 +234,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <section class="hero" id="top">
   <div class="hero-copy">
     <h1 data-i18n="h1">Fresh color.<br><span class="c">Solid floors.</span></h1>
-    <p class="promise" data-i18n="promise">We work in your home like it's our own: everything covered, every edge clean, and nothing left behind but the new color.</p>
+    <p class="promise" data-i18n="promise">We treat your house like it's our own: everything covered, every edge clean, and nothing left behind but the new color.</p>
     <div class="cta">
       <a class="btn primary" href="#quote" data-i18n="ctaQuote">Get a quote</a>
       <a class="btn ghost" id="textPhoto" href="sms:+17329175197?&amp;body=Hi%20Jersey%20Colors!%20I'd%20like%20a%20quote.%20Here's%20a%20photo%20of%20the%20job."><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 3.5V17A2.5 2.5 0 0 1 4 14.5z"/></svg><span data-i18n="ctaText">Text us a photo</span></a>
@@ -249,11 +260,11 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <div class="wrap">
     <h2 data-i18n="svcH">What we do</h2>
     <ul class="rows">
-      <li><a class="row" data-svc="interior" href="#"><span class="dot" style="--c:#3f8c91"></span><span class="name" data-i18n="s1">Interior painting</span><span class="arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
-      <li><a class="row" data-svc="exterior" href="#"><span class="dot" style="--c:#e8b03a"></span><span class="name" data-i18n="s2">Exterior painting</span><span class="arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
-      <li><a class="row" data-svc="siding" href="#"><span class="dot" style="--c:#d8703a"></span><span class="name" data-i18n="s3">Siding &amp; trim</span><span class="arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
-      <li><a class="row" data-svc="floors" href="#"><span class="dot" style="--c:#8a5a35"></span><span class="name" data-i18n="s4">Floors</span><span class="arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
-      <li><a class="row" data-svc="remodel" href="#"><span class="dot" style="--c:#33223f"></span><span class="name" data-i18n="s5">Home remodeling</span><span class="arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+      <li><a class="row" data-svc="interior" href="sms:+17329175197?&amp;body=Hi%20Jersey%20Colors!%20I'd%20like%20a%20quote%20for%20interior%20painting.%20My%20town%20is%3A%20"><span class="dot" style="--c:#3f8c91"></span><span class="name" data-i18n="s1">Interior painting</span><span class="arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+      <li><a class="row" data-svc="exterior" href="sms:+17329175197?&amp;body=Hi%20Jersey%20Colors!%20I'd%20like%20a%20quote%20for%20exterior%20painting.%20My%20town%20is%3A%20"><span class="dot" style="--c:#e8b03a"></span><span class="name" data-i18n="s2">Exterior painting</span><span class="arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+      <li><a class="row" data-svc="siding" href="sms:+17329175197?&amp;body=Hi%20Jersey%20Colors!%20I'd%20like%20a%20quote%20for%20siding%20%26%20trim.%20My%20town%20is%3A%20"><span class="dot" style="--c:#d8703a"></span><span class="name" data-i18n="s3">Siding &amp; trim</span><span class="arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+      <li><a class="row" data-svc="floors" href="sms:+17329175197?&amp;body=Hi%20Jersey%20Colors!%20I'd%20like%20a%20quote%20for%20floors.%20My%20town%20is%3A%20"><span class="dot" style="--c:#8a5a35"></span><span class="name" data-i18n="s4">Floors</span><span class="arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+      <li><a class="row" data-svc="remodel" href="sms:+17329175197?&amp;body=Hi%20Jersey%20Colors!%20I'd%20like%20a%20quote%20for%20home%20remodeling.%20My%20town%20is%3A%20"><span class="dot" style="--c:#33223f"></span><span class="name" data-i18n="s5">Home remodeling</span><span class="arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
     </ul>
   </div>
 </section>
@@ -266,7 +277,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <ol class="steps">
       <li><span class="n" style="--c:#f2b322">1</span><h3 data-i18n="h1t">Send us a photo</h3><p data-i18n="h1p">A picture of the room or the outside and your town is enough to get started.</p></li>
       <li><span class="n" style="--c:#e9884a">2</span><h3 data-i18n="h2t">We come take a look</h3><p data-i18n="h2p">We walk it with you, listen to what you want, and give you a clear quote.</p></li>
-      <li><span class="n" style="--c:#7fc1c0">3</span><h3 data-i18n="h3t">We treat it like our own</h3><p data-i18n="h3p">Floors and furniture covered, clean lines, and we clean up before we leave.</p></li>
+      <li><span class="n" style="--c:#7fc1c0">3</span><h3 data-i18n="h3t">We leave it clean</h3><p data-i18n="h3p">Floors and furniture covered, clean lines, and we clean up before we leave.</p></li>
     </ol>
   </div>
 </section>
@@ -278,11 +289,11 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <div>
       <h2 data-i18n="workH">Our work</h2>
       <blockquote class="latest">
-        <p data-i18n="latest">“Just wrapped this full exterior in Monmouth County, NJ — siding, trim, the whole house came out sharp.”</p>
+        <p data-i18n="latest">“Just wrapped this full exterior in Monmouth County, NJ — siding, trim, the whole house <em>came out sharp</em> 🏠”</p>
         <cite data-i18n="latestCite">From our latest job post</cite>
       </blockquote>
     </div>
-    <a class="fb" href="https://www.facebook.com/profile.php?id=61584889347399"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12a12 12 0 1 0-13.9 11.9v-8.4h-3V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg><span data-i18n="fb">Click to see more of our work</span></a>
+    <a class="fb" href="https://www.facebook.com/profile.php?id=61584889347399"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12a12 12 0 1 0-13.9 11.9v-8.4h-3V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg><span data-i18n="fb">See our work on Facebook</span></a>
   </div>
 </section>
 
@@ -294,13 +305,13 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <form id="qform" novalidate>
       <div class="field">
         <label for="qName" data-i18n="qName">Your name</label>
-        <input id="qName" name="name" type="text" autocomplete="name" aria-describedby="eName">
+        <input id="qName" name="name" type="text" autocomplete="name" enterkeyhint="next" aria-describedby="eName">
         <p class="err" id="eName" aria-live="polite"></p>
       </div>
       <fieldset class="field" aria-describedby="eJob">
         <legend class="legend" data-i18n="qJob">What do you need?</legend>
         <div class="chips">
-          <label class="chip"><input type="checkbox" name="job" value="interior"><span style="--c:#3f8c91" data-i18n="s1">Interior painting</span></label>
+          <label class="chip"><input type="checkbox" name="job" value="interior" aria-describedby="eJob"><span style="--c:#3f8c91" data-i18n="s1">Interior painting</span></label>
           <label class="chip"><input type="checkbox" name="job" value="exterior"><span style="--c:#e8b03a" data-i18n="s2">Exterior painting</span></label>
           <label class="chip"><input type="checkbox" name="job" value="siding"><span style="--c:#d8703a" data-i18n="s3">Siding &amp; trim</span></label>
           <label class="chip"><input type="checkbox" name="job" value="floors"><span style="--c:#8a5a35" data-i18n="s4">Floors</span></label>
@@ -310,7 +321,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       </fieldset>
       <div class="field">
         <label for="qTown" data-i18n="qTown">Your town</label>
-        <input id="qTown" name="town" type="text" autocomplete="address-level2" aria-describedby="eTown">
+        <input id="qTown" name="town" type="text" autocomplete="address-level2" enterkeyhint="next" aria-describedby="eTown">
         <p class="err" id="eTown" aria-live="polite"></p>
       </div>
       <div class="field">
@@ -324,14 +335,14 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       </div>
       <div class="field">
         <label for="qNotes"><span data-i18n="qNotes">Anything else?</span> <span class="opt" data-i18n="optional">(optional)</span></label>
-        <textarea id="qNotes" name="notes" data-i18n-ph="qNotesPh" placeholder="Rooms, colors, square feet, anything that helps"></textarea>
+        <textarea id="qNotes" name="notes" maxlength="600" data-i18n-ph="qNotesPh" placeholder="Rooms, colors, square feet, anything that helps"></textarea>
       </div>
-      <button class="btn primary send" type="submit" data-i18n="qSend">Text this to Jersey Colors</button>
+      <button class="btn primary send" type="submit" data-i18n="qSend">Text us this quote</button>
       <p class="help" data-i18n="qHelp">Opens your messages with this already written. Add a photo before you send.</p>
       <div class="done" id="done" role="status" tabindex="-1">
         <p data-i18n="doneP">Your messages app should be open. If it didn’t open, copy this and text it to us:</p>
         <pre id="doneMsg"></pre>
-        <a href="tel:+17329175197" data-i18n="doneCall">Or call (732) 917-5197</a>
+        <div class="row2"><button class="btn ghost" type="button" id="copyMsg" data-i18n="copy">Copy message</button><a href="tel:+17329175197" data-i18n="doneCall">Or call us</a></div>
       </div>
     </form>
   </div>
@@ -343,7 +354,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <div class="wrap">
     <h2>Jersey colors <span class="c">and floors LLC</span></h2>
     <p data-i18n="closeP">Licensed and insured. Based in Long Branch, working across Monmouth County and the rest of New Jersey.</p>
-    <a class="big-phone" href="tel:+17329175197"><span data-i18n="callUs">Call us</span><b>(732) 917-5197</b></a>
   </div>
 </section>
 </main>
@@ -365,28 +375,28 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 (function () {
   var ES = {
     h1: 'Color fresco.<br><span class="c">Pisos firmes.</span>',
-    promise: 'Trabajamos en tu casa como si fuera nuestra: todo cubierto, cada borde limpio, y lo único que dejamos es el color nuevo.',
+    promise: 'Cuidamos tu casa como si fuera nuestra: todo cubierto, cada borde limpio, y lo único que dejamos es el color nuevo.',
     ctaQuote: 'Pide tu cotización', ctaText: 'Mándanos una foto',
     sceneAria: 'Una casa pintándose. Arrastra sobre ella para pintarla tú.',
     colorsAria: 'Color de pintura', cTeal: 'Verde azulado', cGold: 'Dorado', cOrange: 'Naranja', cCream: 'Crema',
-    hint: 'Arrastra para pintar',
-    svcH: 'Lo que hacemos', s1: 'Pintura interior', s2: 'Pintura exterior', s3: 'Siding y molduras', s4: 'Pisos', s5: 'Remodelación',
+    hint: 'Arrastra para pintar', hintDone: '¡Quedó impecable!',
+    svcH: 'Lo que hacemos', s1: 'Pintura interior', s2: 'Pintura exterior', s3: 'Siding y molduras', s4: 'Pisos', s5: 'Remodelación de casas',
     howH: 'Cómo trabajamos',
     h1t: 'Mándanos una foto', h1p: 'Una foto del cuarto o de afuera y tu ciudad bastan para empezar.',
     h2t: 'Vamos a verlo', h2p: 'Lo recorremos contigo, escuchamos lo que quieres y te damos una cotización clara.',
-    h3t: 'Lo cuidamos como nuestro', h3p: 'Pisos y muebles cubiertos, líneas limpias, y recogemos todo antes de irnos.',
+    h3t: 'Lo dejamos limpio', h3p: 'Pisos y muebles cubiertos, líneas limpias, y recogemos todo antes de irnos.',
     workH: 'Nuestro trabajo',
-    latest: '“Acabamos de terminar este exterior completo en el condado de Monmouth, NJ: siding, molduras, toda la casa quedó impecable.”',
-    latestCite: 'De nuestra última publicación',
-    fb: 'Mira más de nuestro trabajo',
+    latest: '“Acabamos de terminar este exterior completo en el condado de Monmouth, NJ: siding, molduras, toda la casa <em>quedó impecable</em> 🏠”',
+    latestCite: 'De nuestra última publicación (traducida)',
+    fb: 'Mira nuestro trabajo en Facebook',
     qH: 'Pide tu cotización', qName: 'Tu nombre', qJob: '¿Qué necesitas?', qTown: 'Tu ciudad', qWhen: '¿Para cuándo?', optional: '(opcional)',
-    w0: 'Elige una', w1: 'Lo antes posible', w2: 'En uno o dos meses', w3: 'Solo comparando precios',
+    w0: 'Elige una opción', w1: 'Lo antes posible', w2: 'En uno o dos meses', w3: 'Solo comparando precios',
     qNotes: '¿Algo más?', qNotesPh: 'Cuartos, colores, pies cuadrados, lo que ayude',
-    qSend: 'Enviar por texto a Jersey Colors', qHelp: 'Abre tus mensajes con esto ya escrito. Agrega una foto antes de enviar.',
+    qSend: 'Mándanos esto por texto', qHelp: 'Abre tus mensajes con esto ya escrito. Agrega una foto antes de enviar.',
     doneP: 'Tu app de mensajes debería estar abierta. Si no se abrió, copia esto y mándanoslo por texto:',
-    doneCall: 'O llama al (732) 917-5197',
-    closeP: 'Con licencia y seguro. Desde Long Branch, trabajando en todo el condado de Monmouth y el resto de Nueva Jersey.',
-    callUs: 'Llámanos', footArea: 'Long Branch, Nueva Jersey'
+    doneCall: 'O llámanos', copy: 'Copiar mensaje', copied: 'Copiado',
+    closeP: 'Con licencia y asegurados. Estamos en Long Branch y trabajamos en todo el condado de Monmouth y el resto de Nueva Jersey.',
+    footArea: 'Long Branch, Nueva Jersey'
   };
   var EN = {}, nodes = document.querySelectorAll('[data-i18n]');
   nodes.forEach(function (n) { EN[n.dataset.i18n] = n.innerHTML; });
@@ -396,6 +406,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   var btn = document.getElementById('lang');
   window.JC = window.JC || {};
   JC.lang = 'en';
+  EN.copied = 'Copied'; EN.hintDone = 'Looking sharp.';
   JC.t = function (k) { return (JC.lang === 'es' ? ES : EN)[k]; };
 
   function apply(lang) {
@@ -430,7 +441,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   var PHONE = '+17329175197';
   var SVC = {
     en: { interior: 'interior painting', exterior: 'exterior painting', siding: 'siding & trim', floors: 'floors', remodel: 'home remodeling' },
-    es: { interior: 'pintura interior', exterior: 'pintura exterior', siding: 'siding y molduras', floors: 'pisos', remodel: 'remodelación' }
+    es: { interior: 'pintura interior', exterior: 'pintura exterior', siding: 'siding y molduras', floors: 'pisos', remodel: 'remodelación de casas' }
   };
   JC.SVC = SVC;
   JC.sms = function (body) { return 'sms:' + PHONE + '?&body=' + encodeURIComponent(body); };
@@ -456,6 +467,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   var PASS_PAUSE = 900;      // ms pause between coats
   var STIFF = 260, DAMP = 26;// brush spring
   var PAINT_K = 2;           // paint layer resolution per scene px
+  var REWARD_AT = 2600;      // scene px of the visitor's own strokes before the hint says well done
   var SW = 800, SH = 640;    // scene size (ground from y 520 down)
 
   var canvas = document.getElementById('paint');
@@ -463,6 +475,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   var ctx = canvas.getContext('2d');
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var swatches = [].slice.call(document.querySelectorAll('.swatch'));
+  var hint = document.querySelector('.hint'), painted = 0, rewarded = false;
 
   // House geometry (scene coords)
   var G = 520, L = 180, R = 620, T = 270, PEAK = 112;
@@ -494,10 +507,10 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     canvas.height = base.height = over.height = Math.round(ch * dpr);
     var wide = cw >= 1000;
     if (wide) {
-      s = Math.min(ch / (SH + 30), cw * 0.5 / 560);
-      ox = cw * 0.72 - 400 * s;
+      s = Math.min(ch / (SH + 30), cw * 0.42 / 560);
+      ox = cw * 0.745 - 400 * s;
     } else {
-      s = Math.min(cw / 600, ch / (SH - 72));
+      s = Math.min(cw / 600, ch / SH);
       ox = cw / 2 - 400 * s;
     }
     oy = ch - SH * s;
@@ -521,9 +534,8 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     c.lineCap = 'round';
     [['#dd6e14', 292], ['#f2b322', 263], ['#1d6b74', 234]].forEach(function (a) {
       c.beginPath(); c.moveTo(400 - a[1], G + 2); c.lineTo(400 - a[1], 330); c.arc(400, 330, a[1], Math.PI, 0); c.lineTo(400 + a[1], G + 2);
-      c.strokeStyle = a[0]; c.lineWidth = 27; c.stroke();
-      c.strokeStyle = 'rgba(255,255,255,.16)'; c.lineWidth = 7;
-      c.beginPath(); c.arc(400, 330, a[1] - 7, Math.PI * 1.06, Math.PI * 1.94); c.stroke();
+      c.save(); c.shadowColor = 'rgba(40,20,40,.25)'; c.shadowBlur = 12 * s * dpr; c.shadowOffsetY = 6 * s * dpr;
+      c.strokeStyle = a[0]; c.lineWidth = 29; c.stroke(); c.restore();
     });
     // walkway
     c.fillStyle = '#e6d3b4';
@@ -610,7 +622,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     // roof: the logo's thick rounded plum line
     c.lineCap = 'round'; c.lineJoin = 'round';
     roofPath(c); c.strokeStyle = '#3a2a40'; c.lineWidth = 36; c.stroke();
-    c.save(); c.translate(0, -7); roofPath(c); c.strokeStyle = 'rgba(255,255,255,.10)'; c.lineWidth = 10; c.stroke(); c.restore();
     // chimney
     c.fillStyle = '#3a2a40'; rr(c, 520, 112, 34, 74, 6); c.fill();
     c.fillStyle = '#4b3853'; rr(c, 514, 104, 46, 16, 6); c.fill();
@@ -740,7 +751,11 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       vx += ((tx - bx) * STIFF - vx * DAMP) * h; vy += ((ty - by) * STIFF - vy * DAMP) * h;
       bx += vx * h; by += vy * h;
     }
-    if (painting) strokeTo(lastX, lastY, bx, by, now / 1000);
+    if (painting) {
+      strokeTo(lastX, lastY, bx, by, now / 1000);
+      if (user) { painted += Math.hypot(bx - lastX, by - lastY); if (painted > REWARD_AT && !rewarded) { rewarded = true; hint.innerHTML = JC.t('hintDone'); } }
+    }
+    if (!user && rewarded) { rewarded = false; painted = 0; hint.innerHTML = JC.t('hint'); }
     lastX = bx; lastY = by;
     var wantA = .42 + Math.max(-.5, Math.min(.5, -vx * .0009)) + .04 * Math.sin(now / 420);
     angle += (wantA - angle) * Math.min(1, dt * 8);
@@ -781,8 +796,8 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H); svg.setAttribute('preserveAspectRatio', 'none');
     svg.style.background = el.dataset.from;
     var d = 'M0 ' + H, x;
-    for (x = 0; x <= W; x += 8) {
-      var y = 24 + 5 * Math.sin(x * .0045 + p1) + 2.5 * Math.sin(x * .017 + p2) + (r() - .5) * 2.2;
+    for (x = 0; x <= W; x += 4) {
+      var y = 24 + 5 * Math.sin(x * .0045 + p1) + 2.5 * Math.sin(x * .017 + p2) + (r() - .5) * 5;
       d += ' L' + x + ' ' + y.toFixed(1);
     }
     d += ' L' + W + ' ' + H + ' Z';
@@ -791,14 +806,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     cp.appendChild(cr); defs.appendChild(cp); svg.appendChild(defs);
     var g = document.createElementNS(NS, 'g'); g.setAttribute('clip-path', 'url(#' + clipId + ')'); g.setAttribute('fill', el.dataset.to);
     var path = document.createElementNS(NS, 'path'); path.setAttribute('d', d); g.appendChild(path);
-    // dry-brush streaks above the edge
-    for (var i = 0; i < 26; i++) {
-      var sx = r() * W, len = 40 + r() * 260, sy = 10 + r() * 14, sh = 1.2 + r() * 2.6;
-      var st = document.createElementNS(NS, 'rect');
-      st.setAttribute('x', sx.toFixed(0)); st.setAttribute('y', sy.toFixed(1)); st.setAttribute('width', len.toFixed(0)); st.setAttribute('height', sh.toFixed(1)); st.setAttribute('rx', sh / 2);
-      st.setAttribute('opacity', (.45 + r() * .5).toFixed(2));
-      g.appendChild(st);
-    }
     svg.appendChild(g); el.appendChild(svg);
     el._reveal = cr;
   });
@@ -826,7 +833,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   var f = document.getElementById('qform'), done = document.getElementById('done'), msg = document.getElementById('doneMsg');
   var E = {
     en: { name: 'Add your name so we know who’s texting.', job: 'Pick at least one so we know what the job is.', town: 'Add your town so we know where the job is.' },
-    es: { name: 'Escribe tu nombre para saber quién nos escribe.', job: 'Elige al menos uno para saber qué trabajo es.', town: 'Escribe tu ciudad para saber dónde es el trabajo.' }
+    es: { name: 'Pon tu nombre para saber quién nos escribe.', job: 'Elige al menos uno para saber qué trabajo es.', town: 'Escribe tu ciudad para saber dónde es el trabajo.' }
   };
   function setErr(id, input, text) { document.getElementById(id).textContent = text || ''; if (input) input.setAttribute('aria-invalid', text ? 'true' : 'false'); }
   f.addEventListener('submit', function (e) {
@@ -853,7 +860,13 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   });
   ['name', 'town'].forEach(function (n) { f[n].addEventListener('input', function () { if (f[n].value.trim()) setErr(n === 'name' ? 'eName' : 'eTown', f[n], ''); }); });
   f.addEventListener('change', function (e) { if (e.target.name === 'job') setErr('eJob', null, ''); });
-  JC.onLang.push(function () { ['eName', 'eJob', 'eTown'].forEach(function (id) { document.getElementById(id).textContent = ''; }); });
+  JC.onLang.push(function () { done.classList.remove('show'); ['eName', 'eJob', 'eTown'].forEach(function (id) { document.getElementById(id).textContent = ''; }); });
+  document.getElementById('copyMsg').addEventListener('click', function () {
+    var b = this;
+    function ok() { b.textContent = JC.t('copied') || 'Copied'; setTimeout(function () { b.textContent = JC.t('copy') || 'Copy message'; }, 2200); }
+    try { navigator.clipboard.writeText(msg.textContent).then(ok, sel); } catch (e) { sel(); }
+    function sel() { var r = document.createRange(); r.selectNodeContents(msg); var w = getSelection(); w.removeAllRanges(); w.addRange(r); }
+  });
 })();
 
 if (JC.initialLang !== 'en') JC.applyLang(JC.initialLang);
