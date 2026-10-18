@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "low-contrast",
+        "value": "1.0:1 (need 4.5:1) — text #fcebd7 on #fcebd7",
+        "createdAt": "2026-10-18T13:37:09.488Z",
+        "reason": "Claude, pitch-site build: .hint text sits over the canvas lawn (#4f6a2c, 5.25:1), detector reads the hero ground behind the canvas"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "cream/beige page background rgb(252, 235, 215)",
+        "createdAt": "2026-10-18T13:37:09.555Z",
+        "reason": "Claude, pitch-site build: #fcebd7 is sampled from the client's own logo background (PRODUCT.md brand commitments)"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "<ul> \"rows\": children flush against border-top on top (no inset)",
+        "createdAt": "2026-10-18T13:37:09.623Z",
+        "reason": "Claude, pitch-site build: hairline rule above a list whose rows carry 12px vertical padding"
+      }
+    ]
+  }
+}

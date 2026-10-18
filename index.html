@@ -1,0 +1,861 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jersey colors and floors LLC · Painting and floors in New Jersey</title>
+<meta name="description" content="Interior and exterior painting, siding and trim, floors and home remodeling. Long Branch, NJ. Call (732) 917-5197.">
+<meta name="theme-color" content="#fcebd7">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jersey colors and floors LLC">
+<meta property="og:description" content="Fresh color. Solid floors. Painting, siding and trim, floors and remodeling across New Jersey.">
+<meta property="og:url" content="https://10elizabethbell.github.io/jerseyColors/">
+<meta property="og:image" content="https://10elizabethbell.github.io/jerseyColors/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<style>
+/* ===== Tokens ===== */
+:root{
+  --cream:#fcebd7; --cream-2:#f6dfc4; --paper:#fff8ee;
+  --plum:#33223f; --plum-2:#271a31; --ink:#2b1f33; --ink-soft:#5c4a63;
+  --orange:#dd6e14; --orange-deep:#b9520a; --orange-text:#a34606; --gold:#f2b322; --teal:#0e5a64; --teal-ink:#0b4b54;
+  --lawn:#4f6a2c;
+  --line:rgba(51,34,63,.16);
+  --focus:#0e5a64;
+  --display: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --body: system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --gutter:16px;
+  --r:18px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overscroll-behavior-y:none;scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 17px/1.55 var(--body);overflow-x:hidden}
+::selection{background:var(--gold);color:var(--plum)}
+input,textarea,select{caret-color:var(--teal)}
+a{color:inherit;text-underline-offset:.18em}
+img{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--display);font-weight:900;line-height:.98;letter-spacing:-.02em;margin:0;text-wrap:balance}
+h2{font-size:clamp(34px,9vw,60px);text-transform:uppercase}
+.wrap{padding:0 var(--gutter);max-width:1180px;margin:0 auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:6px}
+html{scrollbar-color:var(--plum) var(--cream)}
+
+/* ===== Header ===== */
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:8px;padding:10px var(--gutter);background:rgba(252,235,215,.94);-webkit-backdrop-filter:saturate(1.2) blur(10px);backdrop-filter:saturate(1.2) blur(10px)}
+.brand{display:flex;align-items:center;gap:8px;text-decoration:none;margin-right:auto;min-height:44px}
+.brand img{width:42px;height:42px;border-radius:10px}
+.wm{display:flex;flex-direction:column;line-height:1;font-family:var(--display);text-transform:uppercase}
+.wm b{font-weight:900;font-size:21px;letter-spacing:.01em;color:var(--ink)}
+.wm small{font-weight:800;font-size:9.5px;letter-spacing:.04em;color:var(--orange-text);margin-top:3px}
+.lang{appearance:none;border:0;background:none;font:800 14px/1 var(--display);color:var(--ink-soft);min-width:44px;min-height:44px;padding:0 6px;border-radius:10px;cursor:pointer;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:.25em}
+.lang:hover{color:var(--teal)}
+.lang .long{display:none}
+.phone{font:900 15.5px/1 var(--display);color:var(--plum);text-decoration:none;white-space:nowrap;min-height:44px;display:flex;align-items:center;gap:6px}
+.phone svg{width:16px;height:16px;flex:none;color:var(--orange-text)}
+.phone:hover{color:var(--orange-text)}
+
+/* ===== Hero ===== */
+.hero{position:relative;background:var(--cream)}
+.hero-copy{position:relative;z-index:2;padding:18px var(--gutter) 18px}
+.hero h1{font-size:clamp(46px,14vw,104px);text-transform:uppercase;color:var(--plum)}
+.hero h1 .c{color:var(--orange-text)}
+.promise{font-size:clamp(17px,4.6vw,20px);max-width:34ch;margin:14px 0 20px;color:var(--ink-soft)}
+.cta{display:grid;gap:10px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 24px;border-radius:999px;font:900 17px/1 var(--display);text-transform:uppercase;letter-spacing:.02em;text-decoration:none;border:2.5px solid var(--orange-deep);cursor:pointer;transition:background-color .2s,color .2s,border-color .2s,transform .15s}
+.btn:active{transform:translateY(1px)}
+.btn.primary{background:var(--orange-deep);color:var(--paper);box-shadow:0 8px 18px -10px rgba(185,82,10,.8)}
+.btn.primary:hover{background:#a24707;border-color:#a24707}
+.btn.ghost{background:transparent;color:var(--plum);border-color:var(--plum)}
+.btn.ghost:hover{background:var(--plum);color:var(--cream)}
+.btn svg{width:20px;height:20px;flex:none}
+
+.scene{position:relative;margin:0;height:clamp(320px,92vw,420px)}
+.scene canvas{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;cursor:none}
+.tools{position:absolute;left:var(--gutter);right:var(--gutter);bottom:12px;display:flex;align-items:center;gap:8px;z-index:3;pointer-events:none}
+.swatch{pointer-events:auto;appearance:none;width:44px;height:44px;border-radius:50%;border:3px solid var(--cream);background:var(--c);cursor:pointer;box-shadow:0 4px 10px -4px rgba(20,12,24,.55);transition:transform .2s cubic-bezier(.2,.9,.3,1.4)}
+.swatch[aria-checked="true"]{transform:scale(1.12);border-color:var(--plum);box-shadow:0 0 0 3px var(--cream),0 6px 14px -4px rgba(20,12,24,.6)}
+.swatch:hover{transform:scale(1.08)}
+.swatch[aria-checked="true"]:hover{transform:scale(1.12)}
+.hint{margin:0 0 0 6px;font:800 16px/1.1 var(--display);color:var(--cream);text-shadow:0 1px 2px rgba(30,40,10,.5)}
+
+/* ===== Seams (painted section edges) ===== */
+.seam{display:block;height:34px;position:relative;z-index:1}
+.seam svg{display:block;width:100%;height:100%}
+
+/* ===== Services ===== */
+.services{background:var(--cream);padding:36px 0 52px}
+.services h2{color:var(--plum);margin-bottom:18px}
+.rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.row{display:flex;align-items:center;gap:14px;min-height:72px;padding:12px 2px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);-webkit-tap-highlight-color:transparent}
+.rows li:first-child .row{border-top:0}
+.row .dot{width:16px;height:16px;border-radius:50% 46% 52% 48%;background:var(--c);flex:none;box-shadow:inset 0 -2px 3px rgba(0,0,0,.18)}
+.row .name{font:900 clamp(22px,6.2vw,32px)/1.05 var(--display);text-transform:uppercase;letter-spacing:-.01em;margin-right:auto}
+.arrow{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;flex:none;background:rgba(51,34,63,.08);color:var(--plum);transition:background-color .2s,color .2s,transform .2s}
+.arrow svg{width:20px;height:20px}
+.row:hover,.row:focus-visible{outline:none;background:none;box-shadow:none}
+.row:hover .arrow,.row:focus-visible .arrow{background:var(--orange-deep);color:var(--paper);transform:translateX(3px)}
+.row:focus-visible .arrow{outline:3px solid var(--focus);outline-offset:3px}
+
+/* ===== How a job goes ===== */
+.how{background:var(--plum);color:var(--cream);padding:40px 0 56px}
+.how h2{color:var(--cream);margin-bottom:26px}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:26px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:56px 1fr;gap:4px 14px;align-items:start}
+.steps .n{grid-row:span 2;width:56px;height:56px;border-radius:52% 48% 50% 46%;display:grid;place-items:center;font:900 28px/1 var(--display);color:var(--plum);background:var(--c)}
+.steps h3{font-size:clamp(22px,6vw,28px);text-transform:uppercase;padding-top:6px}
+.steps p{margin:6px 0 0;color:#e9d6e8;max-width:40ch}
+
+/* ===== Our work ===== */
+.work{background:var(--teal);color:var(--cream);padding:40px 0 56px}
+.work h2{margin-bottom:22px}
+.latest{margin:0 0 28px;padding:0;max-width:30ch}
+.latest p{margin:0;font:800 clamp(24px,6.6vw,40px)/1.15 var(--display);letter-spacing:-.01em;text-wrap:balance}
+.latest cite{display:block;margin-top:14px;font:700 15px/1.3 var(--body);font-style:normal;color:#cfe3e2;letter-spacing:.02em}
+.fb{display:flex;align-items:center;justify-content:center;gap:12px;min-height:60px;padding:10px 22px;text-align:center;border-radius:999px;background:var(--cream);color:var(--teal-ink);font:900 clamp(15px,4.2vw,18px)/1.1 var(--display);text-transform:uppercase;text-decoration:none;border:2.5px solid var(--cream);box-shadow:0 10px 22px -12px rgba(0,0,0,.6);transition:background-color .2s,color .2s}
+.fb svg{width:24px;height:24px;flex:none}
+.fb:hover{background:var(--gold);border-color:var(--gold);color:var(--plum)}
+
+/* ===== Quote form ===== */
+.quote{background:var(--cream);padding:40px 0 60px}
+.quote h2{color:var(--plum);margin-bottom:22px}
+form{display:grid;gap:20px;max-width:560px}
+.field{display:grid;gap:8px}
+.field > label,.legend{font:800 16px/1.2 var(--display);text-transform:uppercase;letter-spacing:.03em;color:var(--plum)}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.opt{font:400 14px var(--body);text-transform:none;letter-spacing:0;color:var(--ink-soft)}
+input[type=text],textarea,select{width:100%;font:400 17px/1.4 var(--body);color:var(--ink);background:var(--paper);border:2px solid rgba(51,34,63,.28);border-radius:14px;padding:14px 16px;min-height:54px;transition:border-color .15s,box-shadow .15s}
+textarea{min-height:110px;resize:vertical}
+select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 8l5 5 5-5' fill='none' stroke='%2333223f' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:44px}
+::placeholder{color:#7d6b80}
+input[type=text]:hover,textarea:hover,select:hover,input[type=text]:focus,textarea:focus,select:focus{border-color:var(--focus);outline:none;box-shadow:0 0 0 3px rgba(14,90,100,.22)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.chip span{display:flex;align-items:center;gap:8px;min-height:48px;padding:0 16px;border-radius:999px;border:2px solid rgba(51,34,63,.28);background:var(--paper);font:700 16px/1 var(--body);color:var(--ink);cursor:pointer;transition:border-color .15s,background-color .15s,color .15s,box-shadow .15s;-webkit-user-select:none;user-select:none}
+.chip span::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--c);box-shadow:inset 0 -1px 2px rgba(0,0,0,.2)}
+.chip:hover span,.chip input:focus-visible + span{border-color:var(--focus);box-shadow:0 0 0 3px rgba(14,90,100,.22)}
+.chip input:checked + span{background:var(--plum);border-color:var(--plum);color:var(--cream)}
+.chip:hover input:checked + span,.chip input:checked:focus-visible + span{border-color:var(--focus)}
+.err{color:#9a2b0c;font:700 15px/1.3 var(--body);margin:0}
+.err:empty{display:none}
+[aria-invalid="true"]{border-color:#b33a12 !important}
+.send{width:100%;font-size:18px}
+.send:hover,.send:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.help{margin:-8px 0 0;color:var(--ink-soft);font-size:16px}
+.done{display:none;background:var(--paper);border-radius:var(--r);padding:20px;border:2px solid rgba(14,90,100,.35)}
+.done.show{display:block}
+.done p{margin:0 0 10px}
+.done pre{white-space:pre-wrap;font:400 16px/1.5 var(--body);background:var(--cream);padding:14px;border-radius:12px;margin:0 0 12px}
+.done a{font-weight:800;color:var(--teal)}
+
+/* ===== Close + footer ===== */
+.close{background:var(--plum);color:var(--cream);padding:44px 0 56px}
+.close h2{font-size:clamp(38px,11vw,84px);margin-bottom:18px}
+.close h2 .c{color:var(--gold)}
+.close p{margin:0 0 26px;max-width:42ch;color:#e9d6e8;font-size:18px}
+.big-phone{display:inline-flex;flex-direction:column;gap:6px;text-decoration:none}
+.big-phone b{font:900 clamp(34px,10vw,64px)/1 var(--display);color:var(--gold);letter-spacing:-.01em}
+.big-phone span{font:800 15px/1 var(--display);text-transform:uppercase;letter-spacing:.06em;color:#c9b7c9}
+.big-phone:hover b{text-decoration:underline;text-decoration-thickness:3px}
+footer{background:var(--plum-2);color:#c9b7c9;padding:28px 0 calc(28px + env(safe-area-inset-bottom));font-size:16px}
+footer .wrap{display:grid;gap:10px}
+footer strong{color:var(--cream);font-family:var(--display);font-weight:900;font-size:18px}
+footer a{color:var(--cream);text-decoration-color:rgba(252,235,215,.4)}
+footer a:hover{color:var(--gold)}
+footer nav{display:flex;flex-wrap:wrap;gap:6px 22px}
+footer nav a{min-height:44px;display:inline-flex;align-items:center}
+
+/* ===== Bigger phones / tablets ===== */
+@media (min-width:600px){
+  :root{--gutter:28px}
+  .cta{grid-template-columns:auto auto;justify-content:start}
+  .seam{height:48px}
+  .wm small{font-size:11px}.wm b{font-size:24px}
+  .lang .long{display:inline}.lang .short{display:none}
+  .steps{grid-template-columns:repeat(3,1fr);gap:28px}
+  .steps li{grid-template-columns:1fr}
+  .steps .n{grid-row:auto;margin-bottom:10px}
+}
+/* ===== Desktop ===== */
+@media (min-width:1024px){
+  :root{--gutter:40px}
+  .phone{font-size:18px}
+  .hero{min-height:min(820px,calc(100svh - 64px));display:flex;align-items:center}
+  .hero-copy{max-width:640px;padding:40px 0 140px var(--gutter);margin-left:max(0px,calc((100vw - 1180px)/2))}
+  .scene{position:absolute;inset:0;height:auto}
+  .tools{left:auto;right:var(--gutter);bottom:20px;width:auto}
+  .services .wrap{display:grid;grid-template-columns:5fr 7fr;gap:60px;align-items:start}
+  .services h2{position:sticky;top:110px}
+  .row{min-height:84px}
+  .work .wrap{display:grid;grid-template-columns:7fr 5fr;gap:60px;align-items:end}
+  .latest{margin:0}
+  .quote .wrap{display:grid;grid-template-columns:5fr 7fr;gap:60px;align-items:start}
+  .chips{max-width:560px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition-duration:.01ms !important}
+}
+</style>
+</head>
+<body>
+<!--
+THESIS: The visitor paints a New Jersey house front in the logo's colors, the way the crew just did in Monmouth County. Refuses the contractor template of a stock hero photo, badges and a service-card grid.
+OWN-WORLD: The logo's world: cream ground, thick rounded plum roofline, gold brush with plum ferrule, orange/gold/teal arches, clapboard siding with lap shadows, lawn green. Rounded heavy uppercase type. Section edges are wet brush strokes with dry-brush streaks.
+STORY: Who they are (painting and floors, Long Branch NJ), that they treat your home like their own, how a job goes, where to see more work, then text a quote request or call.
+FIRST VIEWPORT: Phone: header (logo mark + wordmark, ES toggle, phone top-right), two-line uppercase headline, one-line promise, Get a quote (filled) and Text us a photo (outlined), then the house being brushed full width with paint swatches on the lawn. Desktop: copy left in clear cream sky, house right.
+FORM: Painted house front, choice 1 of 7 (runner-up: hardwood floor refinishing). Unattended build, no seed key.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+-->
+<header class="top">
+  <a class="brand" href="#top" aria-label="Jersey colors and floors LLC, top of page">
+    <img src="assets/mark.webp" alt="" width="42" height="42">
+    <span class="wm"><b>Jersey</b><small>Colors and Floors</small></span>
+  </a>
+  <button class="lang" id="lang" type="button" lang="es" aria-label="Ver en español"><span class="short">ES</span><span class="long">Español</span></button>
+  <a class="phone" href="tel:+17329175197"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>(732) 917-5197</a>
+</header>
+
+<main>
+<section class="hero" id="top">
+  <div class="hero-copy">
+    <h1 data-i18n="h1">Fresh color.<br><span class="c">Solid floors.</span></h1>
+    <p class="promise" data-i18n="promise">We work in your home like it's our own: everything covered, every edge clean, and nothing left behind but the new color.</p>
+    <div class="cta">
+      <a class="btn primary" href="#quote" data-i18n="ctaQuote">Get a quote</a>
+      <a class="btn ghost" id="textPhoto" href="sms:+17329175197?&amp;body=Hi%20Jersey%20Colors!%20I'd%20like%20a%20quote.%20Here's%20a%20photo%20of%20the%20job."><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 3.5V17A2.5 2.5 0 0 1 4 14.5z"/></svg><span data-i18n="ctaText">Text us a photo</span></a>
+    </div>
+  </div>
+  <figure class="scene" id="scene">
+    <canvas id="paint" role="img" aria-label="A house front being painted. Drag across it to paint it yourself." data-i18n-aria="sceneAria"></canvas>
+    <div class="tools">
+      <div role="radiogroup" aria-label="Paint color" data-i18n-aria="colorsAria" style="display:flex;gap:8px">
+        <button class="swatch" type="button" role="radio" aria-checked="true" style="--c:#3f8c91" data-color="#3f8c91" aria-label="Teal" data-i18n-aria="cTeal"></button>
+        <button class="swatch" type="button" role="radio" aria-checked="false" style="--c:#e8b03a" data-color="#e8b03a" aria-label="Gold" data-i18n-aria="cGold"></button>
+        <button class="swatch" type="button" role="radio" aria-checked="false" style="--c:#d8703a" data-color="#d8703a" aria-label="Orange" data-i18n-aria="cOrange"></button>
+        <button class="swatch" type="button" role="radio" aria-checked="false" style="--c:#f3e4cc" data-color="#f3e4cc" aria-label="Cream" data-i18n-aria="cCream"></button>
+      </div>
+      <p class="hint" data-i18n="hint">Drag to paint</p>
+    </div>
+  </figure>
+</section>
+
+<div class="seam" data-from="#4f6a2c" data-to="#fcebd7" aria-hidden="true"></div>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <h2 data-i18n="svcH">What we do</h2>
+    <ul class="rows">
+      <li><a class="row" data-svc="interior" href="#"><span class="dot" style="--c:#3f8c91"></span><span class="name" data-i18n="s1">Interior painting</span><span class="arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+      <li><a class="row" data-svc="exterior" href="#"><span class="dot" style="--c:#e8b03a"></span><span class="name" data-i18n="s2">Exterior painting</span><span class="arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+      <li><a class="row" data-svc="siding" href="#"><span class="dot" style="--c:#d8703a"></span><span class="name" data-i18n="s3">Siding &amp; trim</span><span class="arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+      <li><a class="row" data-svc="floors" href="#"><span class="dot" style="--c:#8a5a35"></span><span class="name" data-i18n="s4">Floors</span><span class="arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+      <li><a class="row" data-svc="remodel" href="#"><span class="dot" style="--c:#33223f"></span><span class="name" data-i18n="s5">Home remodeling</span><span class="arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+    </ul>
+  </div>
+</section>
+
+<div class="seam" data-from="#fcebd7" data-to="#33223f" aria-hidden="true"></div>
+
+<section class="how" id="how">
+  <div class="wrap">
+    <h2 data-i18n="howH">How a job goes</h2>
+    <ol class="steps">
+      <li><span class="n" style="--c:#f2b322">1</span><h3 data-i18n="h1t">Send us a photo</h3><p data-i18n="h1p">A picture of the room or the outside and your town is enough to get started.</p></li>
+      <li><span class="n" style="--c:#e9884a">2</span><h3 data-i18n="h2t">We come take a look</h3><p data-i18n="h2p">We walk it with you, listen to what you want, and give you a clear quote.</p></li>
+      <li><span class="n" style="--c:#7fc1c0">3</span><h3 data-i18n="h3t">We treat it like our own</h3><p data-i18n="h3p">Floors and furniture covered, clean lines, and we clean up before we leave.</p></li>
+    </ol>
+  </div>
+</section>
+
+<div class="seam" data-from="#33223f" data-to="#0e5a64" aria-hidden="true"></div>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <div>
+      <h2 data-i18n="workH">Our work</h2>
+      <blockquote class="latest">
+        <p data-i18n="latest">“Just wrapped this full exterior in Monmouth County, NJ — siding, trim, the whole house came out sharp.”</p>
+        <cite data-i18n="latestCite">From our latest job post</cite>
+      </blockquote>
+    </div>
+    <a class="fb" href="https://www.facebook.com/profile.php?id=61584889347399"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12a12 12 0 1 0-13.9 11.9v-8.4h-3V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></svg><span data-i18n="fb">Click to see more of our work</span></a>
+  </div>
+</section>
+
+<div class="seam" data-from="#0e5a64" data-to="#fcebd7" aria-hidden="true"></div>
+
+<section class="quote" id="quote">
+  <div class="wrap">
+    <h2 data-i18n="qH">Get a quote</h2>
+    <form id="qform" novalidate>
+      <div class="field">
+        <label for="qName" data-i18n="qName">Your name</label>
+        <input id="qName" name="name" type="text" autocomplete="name" aria-describedby="eName">
+        <p class="err" id="eName" aria-live="polite"></p>
+      </div>
+      <fieldset class="field" aria-describedby="eJob">
+        <legend class="legend" data-i18n="qJob">What do you need?</legend>
+        <div class="chips">
+          <label class="chip"><input type="checkbox" name="job" value="interior"><span style="--c:#3f8c91" data-i18n="s1">Interior painting</span></label>
+          <label class="chip"><input type="checkbox" name="job" value="exterior"><span style="--c:#e8b03a" data-i18n="s2">Exterior painting</span></label>
+          <label class="chip"><input type="checkbox" name="job" value="siding"><span style="--c:#d8703a" data-i18n="s3">Siding &amp; trim</span></label>
+          <label class="chip"><input type="checkbox" name="job" value="floors"><span style="--c:#8a5a35" data-i18n="s4">Floors</span></label>
+          <label class="chip"><input type="checkbox" name="job" value="remodel"><span style="--c:#33223f" data-i18n="s5">Home remodeling</span></label>
+        </div>
+        <p class="err" id="eJob" aria-live="polite"></p>
+      </fieldset>
+      <div class="field">
+        <label for="qTown" data-i18n="qTown">Your town</label>
+        <input id="qTown" name="town" type="text" autocomplete="address-level2" aria-describedby="eTown">
+        <p class="err" id="eTown" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label for="qWhen"><span data-i18n="qWhen">When?</span> <span class="opt" data-i18n="optional">(optional)</span></label>
+        <select id="qWhen" name="when">
+          <option value="" data-i18n="w0">Pick one</option>
+          <option value="asap" data-i18n="w1">As soon as possible</option>
+          <option value="month" data-i18n="w2">In the next month or two</option>
+          <option value="prices" data-i18n="w3">Just getting prices</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="qNotes"><span data-i18n="qNotes">Anything else?</span> <span class="opt" data-i18n="optional">(optional)</span></label>
+        <textarea id="qNotes" name="notes" data-i18n-ph="qNotesPh" placeholder="Rooms, colors, square feet, anything that helps"></textarea>
+      </div>
+      <button class="btn primary send" type="submit" data-i18n="qSend">Text this to Jersey Colors</button>
+      <p class="help" data-i18n="qHelp">Opens your messages with this already written. Add a photo before you send.</p>
+      <div class="done" id="done" role="status" tabindex="-1">
+        <p data-i18n="doneP">Your messages app should be open. If it didn’t open, copy this and text it to us:</p>
+        <pre id="doneMsg"></pre>
+        <a href="tel:+17329175197" data-i18n="doneCall">Or call (732) 917-5197</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<div class="seam" data-from="#fcebd7" data-to="#33223f" aria-hidden="true"></div>
+
+<section class="close">
+  <div class="wrap">
+    <h2>Jersey colors <span class="c">and floors LLC</span></h2>
+    <p data-i18n="closeP">Licensed and insured. Based in Long Branch, working across Monmouth County and the rest of New Jersey.</p>
+    <a class="big-phone" href="tel:+17329175197"><span data-i18n="callUs">Call us</span><b>(732) 917-5197</b></a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>Jersey colors and floors LLC</strong>
+    <span data-i18n="footArea">Long Branch, New Jersey</span>
+    <nav aria-label="Contact">
+      <a href="tel:+17329175197">(732) 917-5197</a>
+      <a href="https://www.facebook.com/profile.php?id=61584889347399">Facebook</a>
+    </nav>
+    <small>© 2026 Jersey colors and floors LLC</small>
+  </div>
+</footer>
+
+<script>
+/* ===== Language (EN / ES) ===== */
+(function () {
+  var ES = {
+    h1: 'Color fresco.<br><span class="c">Pisos firmes.</span>',
+    promise: 'Trabajamos en tu casa como si fuera nuestra: todo cubierto, cada borde limpio, y lo único que dejamos es el color nuevo.',
+    ctaQuote: 'Pide tu cotización', ctaText: 'Mándanos una foto',
+    sceneAria: 'Una casa pintándose. Arrastra sobre ella para pintarla tú.',
+    colorsAria: 'Color de pintura', cTeal: 'Verde azulado', cGold: 'Dorado', cOrange: 'Naranja', cCream: 'Crema',
+    hint: 'Arrastra para pintar',
+    svcH: 'Lo que hacemos', s1: 'Pintura interior', s2: 'Pintura exterior', s3: 'Siding y molduras', s4: 'Pisos', s5: 'Remodelación',
+    howH: 'Cómo trabajamos',
+    h1t: 'Mándanos una foto', h1p: 'Una foto del cuarto o de afuera y tu ciudad bastan para empezar.',
+    h2t: 'Vamos a verlo', h2p: 'Lo recorremos contigo, escuchamos lo que quieres y te damos una cotización clara.',
+    h3t: 'Lo cuidamos como nuestro', h3p: 'Pisos y muebles cubiertos, líneas limpias, y recogemos todo antes de irnos.',
+    workH: 'Nuestro trabajo',
+    latest: '“Acabamos de terminar este exterior completo en el condado de Monmouth, NJ: siding, molduras, toda la casa quedó impecable.”',
+    latestCite: 'De nuestra última publicación',
+    fb: 'Mira más de nuestro trabajo',
+    qH: 'Pide tu cotización', qName: 'Tu nombre', qJob: '¿Qué necesitas?', qTown: 'Tu ciudad', qWhen: '¿Para cuándo?', optional: '(opcional)',
+    w0: 'Elige una', w1: 'Lo antes posible', w2: 'En uno o dos meses', w3: 'Solo comparando precios',
+    qNotes: '¿Algo más?', qNotesPh: 'Cuartos, colores, pies cuadrados, lo que ayude',
+    qSend: 'Enviar por texto a Jersey Colors', qHelp: 'Abre tus mensajes con esto ya escrito. Agrega una foto antes de enviar.',
+    doneP: 'Tu app de mensajes debería estar abierta. Si no se abrió, copia esto y mándanoslo por texto:',
+    doneCall: 'O llama al (732) 917-5197',
+    closeP: 'Con licencia y seguro. Desde Long Branch, trabajando en todo el condado de Monmouth y el resto de Nueva Jersey.',
+    callUs: 'Llámanos', footArea: 'Long Branch, Nueva Jersey'
+  };
+  var EN = {}, nodes = document.querySelectorAll('[data-i18n]');
+  nodes.forEach(function (n) { EN[n.dataset.i18n] = n.innerHTML; });
+  document.querySelectorAll('[data-i18n-aria]').forEach(function (n) { EN[n.dataset.i18nAria] = n.getAttribute('aria-label'); });
+  document.querySelectorAll('[data-i18n-ph]').forEach(function (n) { EN[n.dataset.i18nPh] = n.getAttribute('placeholder'); });
+
+  var btn = document.getElementById('lang');
+  window.JC = window.JC || {};
+  JC.lang = 'en';
+  JC.t = function (k) { return (JC.lang === 'es' ? ES : EN)[k]; };
+
+  function apply(lang) {
+    JC.lang = lang;
+    var D = lang === 'es' ? ES : EN;
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(function (n) { var v = D[n.dataset.i18n]; if (v != null) n.innerHTML = v; });
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (n) { var v = D[n.dataset.i18nAria]; if (v != null) n.setAttribute('aria-label', v); });
+    document.querySelectorAll('[data-i18n-ph]').forEach(function (n) { var v = D[n.dataset.i18nPh]; if (v != null) n.setAttribute('placeholder', v); });
+    var other = lang === 'es' ? 'en' : 'es';
+    btn.setAttribute('lang', other);
+    btn.setAttribute('aria-label', other === 'es' ? 'Ver en español' : 'View in English');
+    btn.querySelector('.short').textContent = other.toUpperCase();
+    btn.querySelector('.long').textContent = other === 'es' ? 'Español' : 'English';
+    try { localStorage.setItem('jc-lang', lang); } catch (e) {}
+    if (JC.onLang) JC.onLang.forEach(function (f) { f(lang); });
+  }
+  JC.onLang = [];
+  JC.applyLang = apply;
+  btn.addEventListener('click', function () { apply(JC.lang === 'es' ? 'en' : 'es'); });
+
+  var want = null;
+  var q = /[?&]lang=(en|es)/.exec(location.search);
+  if (q) want = q[1];
+  if (!want) { try { want = localStorage.getItem('jc-lang'); } catch (e) {} }
+  if (!want && /^es\b/i.test(navigator.language || '')) want = 'es';
+  JC.initialLang = want || 'en';
+})();
+
+/* ===== Contact links (text messages) ===== */
+(function () {
+  var PHONE = '+17329175197';
+  var SVC = {
+    en: { interior: 'interior painting', exterior: 'exterior painting', siding: 'siding & trim', floors: 'floors', remodel: 'home remodeling' },
+    es: { interior: 'pintura interior', exterior: 'pintura exterior', siding: 'siding y molduras', floors: 'pisos', remodel: 'remodelación' }
+  };
+  JC.SVC = SVC;
+  JC.sms = function (body) { return 'sms:' + PHONE + '?&body=' + encodeURIComponent(body); };
+  function wire(lang) {
+    document.querySelectorAll('.row[data-svc]').forEach(function (a) {
+      var s = SVC[lang][a.dataset.svc];
+      a.href = JC.sms(lang === 'es' ? '¡Hola Jersey Colors! Quisiera una cotización para ' + s + '. Mi ciudad es: ' : 'Hi Jersey Colors! I\'d like a quote for ' + s + '. My town is: ');
+    });
+    document.getElementById('textPhoto').href = JC.sms(lang === 'es' ? '¡Hola Jersey Colors! Quisiera una cotización. Aquí va una foto del trabajo.' : 'Hi Jersey Colors! I\'d like a quote. Here\'s a photo of the job.');
+  }
+  JC.onLang.push(wire);
+  wire('en');
+})();
+
+/* ===== Hero: paint the house ===== */
+(function () {
+  // Tunables
+  var AUTO_SPEED = 560;      // scene px per second while the brush paints by itself
+  var ROW = 20;              // distance between autopilot strokes (scene px)
+  var BRUSH_W = 32;          // painted stripe width (scene px)
+  var BRISTLES = 22;
+  var IDLE_RESUME = 3200;    // ms after the visitor stops before the brush carries on
+  var PASS_PAUSE = 900;      // ms pause between coats
+  var STIFF = 260, DAMP = 26;// brush spring
+  var PAINT_K = 2;           // paint layer resolution per scene px
+  var SW = 800, SH = 640;    // scene size (ground from y 520 down)
+
+  var canvas = document.getElementById('paint');
+  var scene = document.getElementById('scene');
+  var ctx = canvas.getContext('2d');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var swatches = [].slice.call(document.querySelectorAll('.swatch'));
+
+  // House geometry (scene coords)
+  var G = 520, L = 180, R = 620, T = 270, PEAK = 112;
+  var WIN = [[222, 330, 92, 112], [486, 330, 92, 112]];
+  var DOOR = [362, 372, 76, 148];
+  function wallPath(c) {
+    c.beginPath(); c.moveTo(L, G); c.lineTo(L, T); c.lineTo(400, PEAK); c.lineTo(R, T); c.lineTo(R, G); c.closePath();
+  }
+  function roofPath(c) { c.beginPath(); c.moveTo(146, 294); c.lineTo(400, 96); c.lineTo(654, 294); }
+
+  // Paint layer lives in scene coordinates so resizes never wipe it
+  var paint = document.createElement('canvas');
+  paint.width = SW * PAINT_K; paint.height = SH * PAINT_K;
+  var pctx = paint.getContext('2d');
+  pctx.setTransform(PAINT_K, 0, 0, PAINT_K, 0, 0);
+
+  var base = document.createElement('canvas'), over = document.createElement('canvas');
+  var dpr = 1, cw = 0, ch = 0, s = 1, ox = 0, oy = 0;
+
+  function rnd(seed) { return function () { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }; }
+
+  function layout() {
+    var r = canvas.getBoundingClientRect();
+    var w = Math.round(r.width), h = Math.round(r.height);
+    if (w === cw && h === ch) return false;
+    cw = w; ch = h;
+    dpr = Math.min(window.devicePixelRatio || 1, 1.75);
+    canvas.width = base.width = over.width = Math.round(cw * dpr);
+    canvas.height = base.height = over.height = Math.round(ch * dpr);
+    var wide = cw >= 1000;
+    if (wide) {
+      s = Math.min(ch / (SH + 30), cw * 0.5 / 560);
+      ox = cw * 0.72 - 400 * s;
+    } else {
+      s = Math.min(cw / 600, ch / (SH - 72));
+      ox = cw / 2 - 400 * s;
+    }
+    oy = ch - SH * s;
+    drawBase(); drawOver();
+    return true;
+  }
+
+  function toScene(c) { c.setTransform(dpr * s, 0, 0, dpr * s, dpr * ox, dpr * oy); }
+
+  function drawBase() {
+    var c = base.getContext('2d');
+    c.setTransform(1, 0, 0, 1, 0, 0); c.clearRect(0, 0, base.width, base.height);
+    // lawn across the whole canvas
+    var gy = (oy + G * s) * dpr;
+    var lg = c.createLinearGradient(0, gy, 0, base.height);
+    lg.addColorStop(0, '#93a95a'); lg.addColorStop(.45, '#6f8a3e'); lg.addColorStop(1, '#4f6a2c');
+    c.fillStyle = lg; c.fillRect(0, gy, base.width, base.height - gy);
+    toScene(c);
+    // rainbow arches from the logo, behind the house
+    c.lineCap = 'round';
+    [['#dd6e14', 292], ['#f2b322', 263], ['#1d6b74', 234]].forEach(function (a) {
+      c.beginPath(); c.moveTo(400 - a[1], G + 2); c.lineTo(400 - a[1], 330); c.arc(400, 330, a[1], Math.PI, 0); c.lineTo(400 + a[1], G + 2);
+      c.strokeStyle = a[0]; c.lineWidth = 27; c.stroke();
+      c.strokeStyle = 'rgba(255,255,255,.16)'; c.lineWidth = 7;
+      c.beginPath(); c.arc(400, 330, a[1] - 7, Math.PI * 1.06, Math.PI * 1.94); c.stroke();
+    });
+    // walkway
+    c.fillStyle = '#e6d3b4';
+    c.beginPath(); c.moveTo(372, G); c.lineTo(428, G); c.lineTo(470, SH); c.lineTo(330, SH); c.closePath(); c.fill();
+    // old weathered siding
+    wallPath(c); c.fillStyle = '#c9bca6'; c.fill();
+    c.save(); wallPath(c); c.clip();
+    var r = rnd(7);
+    for (var i = 0; i < 90; i++) {
+      var x = L + r() * (R - L), y = PEAK + r() * (G - PEAK), w = 20 + r() * 90;
+      c.fillStyle = r() < .5 ? 'rgba(120,104,84,.10)' : 'rgba(255,250,240,.12)';
+      c.beginPath(); c.ellipse(x, y, w, 6 + r() * 7, 0, 0, Math.PI * 2); c.fill();
+    }
+    // peeling flecks
+    for (i = 0; i < 40; i++) {
+      x = L + r() * (R - L); y = PEAK + 30 + r() * (G - PEAK - 30);
+      c.fillStyle = 'rgba(95,82,70,.22)';
+      c.beginPath(); c.moveTo(x, y); c.lineTo(x + 4 + r() * 10, y + r() * 3); c.lineTo(x + 2 + r() * 6, y + 3 + r() * 3); c.closePath(); c.fill();
+    }
+    c.restore();
+  }
+
+  function drawOver() {
+    var c = over.getContext('2d');
+    c.setTransform(1, 0, 0, 1, 0, 0); c.clearRect(0, 0, over.width, over.height);
+    toScene(c);
+    // clapboard laps: dark lap edge, soft shadow below, light catch above
+    c.save(); wallPath(c); c.clip();
+    for (var y = G - 18; y > PEAK; y -= 18) {
+      var g = c.createLinearGradient(0, y, 0, y + 9);
+      g.addColorStop(0, 'rgba(40,24,36,.30)'); g.addColorStop(1, 'rgba(40,24,36,0)');
+      c.fillStyle = g; c.fillRect(L, y, R - L, 9);
+      c.fillStyle = 'rgba(40,24,36,.32)'; c.fillRect(L, y - .6, R - L, 1.4);
+      c.fillStyle = 'rgba(255,255,255,.14)'; c.fillRect(L, y - 3.2, R - L, 2.2);
+    }
+    // shadow under the eaves
+    for (var k = 0; k < 6; k++) {
+      c.save(); c.translate(0, 8 + k * 4); roofPath(c);
+      c.strokeStyle = 'rgba(40,20,40,' + (0.10 - k * 0.014) + ')'; c.lineWidth = 40 + k * 6; c.stroke(); c.restore();
+    }
+    // side shading for depth
+    var sg = c.createLinearGradient(L, 0, R, 0);
+    sg.addColorStop(0, 'rgba(40,20,40,.12)'); sg.addColorStop(.12, 'rgba(40,20,40,0)'); sg.addColorStop(.88, 'rgba(40,20,40,0)'); sg.addColorStop(1, 'rgba(40,20,40,.16)');
+    c.fillStyle = sg; c.fillRect(L, PEAK, R - L, G - PEAK);
+    c.restore();
+
+    // corner boards
+    c.fillStyle = '#f7ecdc';
+    c.fillRect(L, T - 4, 13, G - T + 4); c.fillRect(R - 13, T - 4, 13, G - T + 4);
+    c.fillStyle = 'rgba(40,20,40,.12)'; c.fillRect(L + 11, T, 2, G - T); c.fillRect(R - 13, T, 2, G - T);
+
+    // windows with shutters
+    WIN.forEach(function (w) {
+      var x = w[0], y = w[1], ww = w[2], hh = w[3];
+      shutter(c, x - 30, y, 24, hh); shutter(c, x + ww + 6, y, 24, hh);
+      c.fillStyle = 'rgba(40,20,40,.18)'; rr(c, x - 7, y - 5, ww + 14, hh + 16, 4); c.fill();
+      c.fillStyle = '#f7ecdc'; rr(c, x - 8, y - 8, ww + 16, hh + 16, 4); c.fill();
+      var gl = c.createLinearGradient(x, y, x + ww, y + hh);
+      gl.addColorStop(0, '#5b8a97'); gl.addColorStop(.55, '#2f5664'); gl.addColorStop(1, '#22414e');
+      c.fillStyle = gl; c.fillRect(x, y, ww, hh);
+      c.fillStyle = 'rgba(255,255,255,.13)';
+      c.beginPath(); c.moveTo(x, y + hh * .55); c.lineTo(x + ww * .55, y); c.lineTo(x + ww * .85, y); c.lineTo(x, y + hh * .9); c.closePath(); c.fill();
+      c.fillStyle = '#f7ecdc'; c.fillRect(x + ww / 2 - 3, y, 6, hh); c.fillRect(x, y + hh / 2 - 3, ww, 6);
+      c.fillStyle = '#e9dcc6'; rr(c, x - 12, y + hh + 6, ww + 24, 9, 3); c.fill();
+    });
+
+    // door
+    var dx = DOOR[0], dy = DOOR[1], dw = DOOR[2], dh = DOOR[3];
+    c.fillStyle = '#f7ecdc'; rr(c, dx - 9, dy - 9, dw + 18, dh + 9, 4); c.fill();
+    var dg = c.createLinearGradient(dx, 0, dx + dw, 0);
+    dg.addColorStop(0, '#4a3358'); dg.addColorStop(1, '#33223f');
+    c.fillStyle = dg; c.fillRect(dx, dy, dw, dh);
+    c.strokeStyle = 'rgba(255,255,255,.12)'; c.lineWidth = 3;
+    c.strokeRect(dx + 11, dy + 14, dw - 22, 48); c.strokeRect(dx + 11, dy + 76, dw - 22, 58);
+    c.fillStyle = '#f2b322'; c.beginPath(); c.arc(dx + dw - 13, dy + 82, 4.5, 0, 7); c.fill();
+    c.fillStyle = '#d9c9ad'; rr(c, dx - 16, G - 8, dw + 32, 12, 3); c.fill();
+
+    // attic vent
+    c.fillStyle = '#f7ecdc'; c.beginPath(); c.arc(400, 205, 26, 0, 7); c.fill();
+    c.fillStyle = '#3a2a40'; c.beginPath(); c.arc(400, 205, 19, 0, 7); c.fill();
+    c.strokeStyle = 'rgba(247,236,220,.55)'; c.lineWidth = 3;
+    for (var v = -12; v <= 12; v += 6) { var hw = Math.sqrt(19 * 19 - v * v) - 2; c.beginPath(); c.moveTo(400 - hw, 205 + v); c.lineTo(400 + hw, 205 + v); c.stroke(); }
+
+    // roof: the logo's thick rounded plum line
+    c.lineCap = 'round'; c.lineJoin = 'round';
+    roofPath(c); c.strokeStyle = '#3a2a40'; c.lineWidth = 36; c.stroke();
+    c.save(); c.translate(0, -7); roofPath(c); c.strokeStyle = 'rgba(255,255,255,.10)'; c.lineWidth = 10; c.stroke(); c.restore();
+    // chimney
+    c.fillStyle = '#3a2a40'; rr(c, 520, 112, 34, 74, 6); c.fill();
+    c.fillStyle = '#4b3853'; rr(c, 514, 104, 46, 16, 6); c.fill();
+
+    // bushes
+    var rb = rnd(11);
+    [[200, 92, 4], [292, 64, 3], [512, 70, 3], [600, 94, 4]].forEach(function (b) { bush(c, b[0], G + 6, b[1], b[2], rb); });
+  }
+  function shutter(c, x, y, w, h) {
+    c.fillStyle = '#3a2a40'; rr(c, x, y - 4, w, h + 8, 3); c.fill();
+    c.fillStyle = 'rgba(255,255,255,.10)';
+    for (var i = y + 6; i < y + h; i += 9) c.fillRect(x + 4, i, w - 8, 2.5);
+  }
+  function bush(c, cx, by, w, n, r) {
+    for (var i = 0; i < n * 3; i++) {
+      var x = cx - w / 2 + r() * w, rad = 16 + r() * (w * .28), y = by - rad * (.5 + r() * .5);
+      var g = c.createRadialGradient(x - rad * .3, y - rad * .4, rad * .1, x, y, rad);
+      g.addColorStop(0, '#7f9d4b'); g.addColorStop(1, '#3f5a25');
+      c.fillStyle = g; c.beginPath(); c.arc(x, y, rad, 0, 7); c.fill();
+    }
+  }
+  function rr(c, x, y, w, h, r) { c.beginPath(); c.moveTo(x + r, y); c.arcTo(x + w, y, x + w, y + h, r); c.arcTo(x + w, y + h, x, y + h, r); c.arcTo(x, y + h, x, y, r); c.arcTo(x, y, x + w, y, r); c.closePath(); }
+
+  // ----- Brush state -----
+  var color = swatches[0].dataset.color, colorIdx = 0;
+  var bx = 120, by = 150, vx = 0, vy = 0, lastX = bx, lastY = by, angle = 0;
+  var bristle = [];
+  (function () { var r = rnd(3); for (var i = 0; i < BRISTLES; i++) bristle.push({ o: (i / (BRISTLES - 1) - .5), a: .35 + r() * .55, ph: r() * 6.28 }); })();
+
+  // Autopilot path: boustrophedon rows down the wall
+  var path = [];
+  (function () {
+    var dir = 1;
+    for (var y = PEAK + 22; y <= G - 10; y += ROW) {
+      var a, b;
+      if (y < T) { var hw = (y - PEAK) / (T - PEAK) * (400 - L); a = 400 - hw + 10; b = 400 + hw - 10; if (b - a < 20) continue; }
+      else { a = L + 4; b = R - 4; }
+      if (dir > 0) { path.push([a, y], [b, y]); } else { path.push([b, y], [a, y]); }
+      dir = -dir;
+    }
+  })();
+  var seg = 0, segT = 0, pauseUntil = 0;
+  function autoTarget(dt, now) {
+    if (now < pauseUntil) return [path[0][0] - 60, path[0][1] - 40];
+    var p0 = path[seg], p1 = path[seg + 1] || path[seg];
+    var len = Math.hypot(p1[0] - p0[0], p1[1] - p0[1]) || 1;
+    segT += AUTO_SPEED * dt / len;
+    if (segT >= 1) {
+      segT = 0; seg++;
+      if (seg >= path.length - 1) { seg = 0; pauseUntil = now + PASS_PAUSE; setColor((colorIdx + 1) % swatches.length); return [p1[0], p1[1]]; }
+      p0 = path[seg]; p1 = path[seg + 1];
+    }
+    var t = now / 1000;
+    return [p0[0] + (p1[0] - p0[0]) * segT, p0[1] + (p1[1] - p0[1]) * segT + 2.6 * Math.sin(t * 5.3) + 1.4 * Math.sin(t * 12.1 + 1)];
+  }
+
+  function setColor(i) {
+    colorIdx = i; color = swatches[i].dataset.color;
+    swatches.forEach(function (b, j) { b.setAttribute('aria-checked', j === i ? 'true' : 'false'); });
+  }
+  swatches.forEach(function (b, i) { b.addEventListener('click', function () { setColor(i); userAt = performance.now(); }); });
+
+  // ----- Pointer -----
+  var px = null, py = null, pointerIn = false, down = false, userAt = -1e9, ptype = 'mouse';
+  canvas.addEventListener('pointerdown', function (e) { ptype = e.pointerType; down = true; pointerIn = true; px = e.clientX; py = e.clientY; userAt = performance.now(); if (e.pointerType !== 'mouse') canvas.setPointerCapture(e.pointerId); e.preventDefault(); kick(); });
+  canvas.addEventListener('pointermove', function (e) { ptype = e.pointerType; pointerIn = true; px = e.clientX; py = e.clientY; if (e.pointerType === 'mouse' || down) userAt = performance.now(); kick(); });
+  function release() { down = false; pointerIn = false; userAt = performance.now(); }
+  canvas.addEventListener('pointerup', release);
+  canvas.addEventListener('pointercancel', release);
+  canvas.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') release(); });
+
+  // ----- Painting -----
+  function strokeTo(x0, y0, x1, y1, t) {
+    var dx = x1 - x0, dy = y1 - y0, d = Math.hypot(dx, dy);
+    if (d < .3) return;
+    var nx = -dy / d, ny = dx / d;
+    pctx.save(); wallPath(pctx); pctx.clip();
+    pctx.strokeStyle = color; pctx.lineCap = 'butt'; pctx.lineWidth = BRUSH_W / BRISTLES * 1.7;
+    for (var i = 0; i < bristle.length; i++) {
+      var b = bristle[i], off = b.o * BRUSH_W;
+      pctx.globalAlpha = Math.min(1, b.a * (.8 + .2 * Math.sin(t * 1.7 + b.ph)));
+      pctx.beginPath(); pctx.moveTo(x0 + nx * off, y0 + ny * off); pctx.lineTo(x1 + nx * off, y1 + ny * off); pctx.stroke();
+    }
+    pctx.restore(); pctx.globalAlpha = 1;
+  }
+
+  function drawBrush(x, y, a) {
+    toScene(ctx);
+    ctx.save(); ctx.translate(x, y); ctx.rotate(a);
+    ctx.shadowColor = 'rgba(30,15,30,.35)'; ctx.shadowBlur = 14; ctx.shadowOffsetY = 8;
+    // handle
+    var hg = ctx.createLinearGradient(-13, 0, 13, 0); hg.addColorStop(0, '#f7c84a'); hg.addColorStop(.6, '#f2b322'); hg.addColorStop(1, '#d7960f');
+    ctx.fillStyle = hg; ctx.beginPath(); ctx.moveTo(-11, -58); ctx.quadraticCurveTo(-15, -110, -10, -150); ctx.arcTo(0, -162, 10, -150, 12); ctx.quadraticCurveTo(15, -110, 11, -58); ctx.closePath(); ctx.fill();
+    ctx.shadowColor = 'transparent';
+    ctx.fillStyle = 'rgba(252,235,215,.95)'; ctx.beginPath(); ctx.arc(0, -138, 4.5, 0, 7); ctx.fill();
+    // ferrule
+    var fg = ctx.createLinearGradient(-20, 0, 20, 0); fg.addColorStop(0, '#4a4350'); fg.addColorStop(.5, '#2b2730'); fg.addColorStop(1, '#1f1c24');
+    ctx.fillStyle = fg; rr(ctx, -21, -60, 42, 26, 5); ctx.fill();
+    // bristles, dipped in the current color
+    ctx.fillStyle = '#3a2a40'; ctx.beginPath(); ctx.moveTo(-20, -36); ctx.lineTo(20, -36); ctx.lineTo(19, -20); ctx.lineTo(-19, -20); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = color; ctx.beginPath(); ctx.moveTo(-19, -22); ctx.lineTo(19, -22);
+    ctx.quadraticCurveTo(19, -6, 13, 0); ctx.quadraticCurveTo(9, -5, 6, 1); ctx.quadraticCurveTo(2, -4, -2, 1); ctx.quadraticCurveTo(-6, -4, -9, 0); ctx.quadraticCurveTo(-13, -4, -15, 0); ctx.quadraticCurveTo(-19, -6, -19, -22); ctx.fill();
+    ctx.fillStyle = 'rgba(0,0,0,.14)'; ctx.fillRect(-19, -22, 38, 4);
+    ctx.restore();
+  }
+
+  // ----- Loop -----
+  var running = false, visible = true, last = 0, raf = 0;
+  function kick() { if (!running && visible) { running = true; last = performance.now(); raf = requestAnimationFrame(tick); } }
+  function tick(now) {
+    var dt = Math.min(.05, (now - last) / 1000); last = now;
+    layout();
+    var user = now - userAt < IDLE_RESUME, tx, ty, painting;
+    if (user && px != null && (pointerIn || down)) {
+      var r = canvas.getBoundingClientRect(); // read every frame: the page can scroll under the finger
+      tx = (px - r.left - ox) / s; ty = (py - r.top - oy) / s;
+      painting = ptype === 'mouse' ? pointerIn : down;
+    } else if (user || reduce) {
+      tx = bx; ty = by; painting = false;
+    } else {
+      var at = autoTarget(dt, now); tx = at[0]; ty = at[1];
+      painting = now >= pauseUntil && Math.hypot(tx - bx, ty - by) < 90;
+    }
+    // spring toward the target in fixed substeps (stable on slow phones): fluid, a touch of lag
+    var h = 1 / 120, n = Math.max(1, Math.round(dt / h));
+    for (var i = 0; i < n; i++) {
+      vx += ((tx - bx) * STIFF - vx * DAMP) * h; vy += ((ty - by) * STIFF - vy * DAMP) * h;
+      bx += vx * h; by += vy * h;
+    }
+    if (painting) strokeTo(lastX, lastY, bx, by, now / 1000);
+    lastX = bx; lastY = by;
+    var wantA = .42 + Math.max(-.5, Math.min(.5, -vx * .0009)) + .04 * Math.sin(now / 420);
+    angle += (wantA - angle) * Math.min(1, dt * 8);
+
+    ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(base, 0, 0);
+    ctx.setTransform(dpr * s / PAINT_K, 0, 0, dpr * s / PAINT_K, dpr * ox, dpr * oy); ctx.drawImage(paint, 0, 0);
+    ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.drawImage(over, 0, 0);
+    var showBrush = !reduce || user;
+    if (showBrush) drawBrush(bx, by, angle);
+
+    if (reduce && !user) { running = false; return; }
+    if (!visible) { running = false; return; }
+    raf = requestAnimationFrame(tick);
+  }
+
+  // Under reduced motion: one finished coat, drawn once; visitor can still paint.
+  function coatNow() { for (var i = 0; i < path.length - 1; i++) strokeTo(path[i][0], path[i][1], path[i + 1][0], path[i + 1][1], i); }
+
+  new IntersectionObserver(function (es) { visible = es[0].isIntersecting; if (visible) kick(); }, { threshold: 0 }).observe(scene);
+  document.addEventListener('visibilitychange', function () { visible = !document.hidden; if (visible) kick(); });
+  if ('ResizeObserver' in window) new ResizeObserver(function () { if (!running) { layout(); tickOnce(); } }).observe(canvas);
+  function tickOnce() { if (!running) { running = true; last = performance.now(); tick(last); } }
+
+  if (reduce) coatNow();
+  layout(); kick();
+})();
+
+/* ===== Painted seams between sections ===== */
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var NS = 'http://www.w3.org/2000/svg';
+  var seams = document.querySelectorAll('.seam');
+  seams.forEach(function (el, k) {
+    var seed = 97 + k * 31; function r() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
+    var W = 1200, H = 48, p1 = r() * 6, p2 = r() * 6;
+    var svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H); svg.setAttribute('preserveAspectRatio', 'none');
+    svg.style.background = el.dataset.from;
+    var d = 'M0 ' + H, x;
+    for (x = 0; x <= W; x += 8) {
+      var y = 24 + 5 * Math.sin(x * .0045 + p1) + 2.5 * Math.sin(x * .017 + p2) + (r() - .5) * 2.2;
+      d += ' L' + x + ' ' + y.toFixed(1);
+    }
+    d += ' L' + W + ' ' + H + ' Z';
+    var clipId = 'sc' + k, defs = document.createElementNS(NS, 'defs'), cp = document.createElementNS(NS, 'clipPath'), cr = document.createElementNS(NS, 'rect');
+    cp.setAttribute('id', clipId); cr.setAttribute('x', 0); cr.setAttribute('y', 0); cr.setAttribute('height', H); cr.setAttribute('width', W);
+    cp.appendChild(cr); defs.appendChild(cp); svg.appendChild(defs);
+    var g = document.createElementNS(NS, 'g'); g.setAttribute('clip-path', 'url(#' + clipId + ')'); g.setAttribute('fill', el.dataset.to);
+    var path = document.createElementNS(NS, 'path'); path.setAttribute('d', d); g.appendChild(path);
+    // dry-brush streaks above the edge
+    for (var i = 0; i < 26; i++) {
+      var sx = r() * W, len = 40 + r() * 260, sy = 10 + r() * 14, sh = 1.2 + r() * 2.6;
+      var st = document.createElementNS(NS, 'rect');
+      st.setAttribute('x', sx.toFixed(0)); st.setAttribute('y', sy.toFixed(1)); st.setAttribute('width', len.toFixed(0)); st.setAttribute('height', sh.toFixed(1)); st.setAttribute('rx', sh / 2);
+      st.setAttribute('opacity', (.45 + r() * .5).toFixed(2));
+      g.appendChild(st);
+    }
+    svg.appendChild(g); el.appendChild(svg);
+    el._reveal = cr;
+  });
+  if (reduce || !('IntersectionObserver' in window)) return;
+  // Seams not yet on screen get brushed in when they arrive.
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      io.unobserve(e.target);
+      var cr = e.target._reveal, t0 = performance.now(), D = 1100;
+      (function step(now) {
+        var t = Math.min(1, (now - t0) / D), k = 1 - Math.pow(2, -10 * t);
+        cr.setAttribute('width', (1200 * (t >= 1 ? 1 : k)).toFixed(1));
+        if (t < 1) requestAnimationFrame(step);
+      })(t0);
+    });
+  }, { threshold: .6 });
+  seams.forEach(function (el) {
+    if (el.getBoundingClientRect().top > innerHeight) { el._reveal.setAttribute('width', 0); io.observe(el); }
+  });
+})();
+
+/* ===== Quote form → text message ===== */
+(function () {
+  var f = document.getElementById('qform'), done = document.getElementById('done'), msg = document.getElementById('doneMsg');
+  var E = {
+    en: { name: 'Add your name so we know who’s texting.', job: 'Pick at least one so we know what the job is.', town: 'Add your town so we know where the job is.' },
+    es: { name: 'Escribe tu nombre para saber quién nos escribe.', job: 'Elige al menos uno para saber qué trabajo es.', town: 'Escribe tu ciudad para saber dónde es el trabajo.' }
+  };
+  function setErr(id, input, text) { document.getElementById(id).textContent = text || ''; if (input) input.setAttribute('aria-invalid', text ? 'true' : 'false'); }
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var lang = JC.lang, name = f.name.value.trim(), town = f.town.value.trim();
+    var jobs = [].slice.call(f.querySelectorAll('input[name=job]:checked')).map(function (c) { return JC.SVC[lang][c.value]; });
+    setErr('eName', f.name, name ? '' : E[lang].name);
+    setErr('eJob', null, jobs.length ? '' : E[lang].job);
+    setErr('eTown', f.town, town ? '' : E[lang].town);
+    if (!name) return f.name.focus();
+    if (!jobs.length) return f.querySelector('input[name=job]').focus();
+    if (!town) return f.town.focus();
+    var when = f.when.selectedIndex > 0 ? f.when.options[f.when.selectedIndex].text : '', notes = f.notes.value.trim();
+    var lines = lang === 'es'
+      ? ['¡Hola Jersey Colors! Quisiera una cotización.', 'Nombre: ' + name, 'Trabajo: ' + jobs.join(', '), 'Ciudad: ' + town]
+      : ['Hi Jersey Colors! I’d like a quote.', 'Name: ' + name, 'Job: ' + jobs.join(', '), 'Town: ' + town];
+    if (when) lines.push((lang === 'es' ? 'Para cuándo: ' : 'When: ') + when);
+    if (notes) lines.push((lang === 'es' ? 'Notas: ' : 'Notes: ') + notes);
+    var body = lines.join('\n');
+    msg.textContent = body;
+    done.classList.add('show');
+    window.location.href = JC.sms(body);
+    setTimeout(function () { done.focus({ preventScroll: false }); }, 600);
+  });
+  ['name', 'town'].forEach(function (n) { f[n].addEventListener('input', function () { if (f[n].value.trim()) setErr(n === 'name' ? 'eName' : 'eTown', f[n], ''); }); });
+  f.addEventListener('change', function (e) { if (e.target.name === 'job') setErr('eJob', null, ''); });
+  JC.onLang.push(function () { ['eName', 'eJob', 'eTown'].forEach(function (id) { document.getElementById(id).textContent = ''; }); });
+})();
+
+if (JC.initialLang !== 'en') JC.applyLang(JC.initialLang);
+</script>
+</body>
+</html>
