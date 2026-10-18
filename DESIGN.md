@@ -26,6 +26,16 @@ colors:
   roof-plum: "#3a2a40"
   trim-cream: "#f7ecdc"
   lawn: "#4f6a2c"
+  step-orange: "#e9884a"
+  step-teal: "#7fc1c0"
+  quote-highlight: "#ffd36b"
+  on-teal-soft: "#cfe3e2"
+  on-plum-muted: "#c9b7c9"
+  placeholder: "#7d6b80"
+  error: "#9a2b0c"
+  error-line: "#b33a12"
+  paint-bead: "rgba(0,0,0,.2)"
+  hint-shadow: "rgba(20,28,8,.8)"
 typography:
   display:
     fontFamily: "ui-rounded, \"SF Pro Rounded\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
@@ -68,11 +78,57 @@ typography:
     fontWeight: 900
     lineHeight: 1.12
     letterSpacing: "0.02em"
+  display-close:
+    fontFamily: "ui-rounded, \"SF Pro Rounded\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+    fontSize: "clamp(38px, 11vw, 84px)"
+    fontWeight: 900
+    lineHeight: 0.98
+  quote-desktop:
+    fontFamily: "ui-rounded, \"SF Pro Rounded\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+    fontSize: "clamp(24px, 3.6vw, 52px)"
+    fontWeight: 800
+    lineHeight: 1.15
+  step-title:
+    fontFamily: "ui-rounded, \"SF Pro Rounded\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+    fontSize: "clamp(22px, 6vw, 28px)"
+    fontWeight: 900
+    lineHeight: 0.98
+  promise:
+    fontFamily: "system-ui, -apple-system, \"Segoe UI\", \"Helvetica Neue\", Arial, sans-serif"
+    fontSize: "clamp(17px, 4.6vw, 20px)"
+    fontWeight: 400
+    lineHeight: 1.55
+  wordmark:
+    fontFamily: "ui-rounded, \"SF Pro Rounded\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+    fontSize: "21px"
+    fontWeight: 900
+  wordmark-sub:
+    fontFamily: "ui-rounded, \"SF Pro Rounded\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+    fontSize: "10.5px"
+    fontWeight: 800
+  wordmark-sub-tablet:
+    fontFamily: "ui-rounded, \"SF Pro Rounded\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+    fontSize: "11px"
+    fontWeight: 800
+  phone-small:
+    fontFamily: "ui-rounded, \"SF Pro Rounded\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+    fontSize: "14px"
+    fontWeight: 900
+  small:
+    fontFamily: "system-ui, -apple-system, \"Segoe UI\", \"Helvetica Neue\", Arial, sans-serif"
+    fontSize: "15px"
+    fontWeight: 700
+  lead:
+    fontFamily: "system-ui, -apple-system, \"Segoe UI\", \"Helvetica Neue\", Arial, sans-serif"
+    fontSize: "18px"
+    fontWeight: 400
 rounded:
   pill: "999px"
   panel: "18px"
   field: "14px"
   mark: "10px"
+  inner: "12px"
+  focus: "6px"
 spacing:
   gutter-phone: "16px"
   gutter-tablet: "28px"
