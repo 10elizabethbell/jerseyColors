@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Jersey colors and floors LLC · Painting and floors in Long Branch, NJ</title>
-<meta name="description" content="Interior and exterior painting, siding and trim, floors and home remodeling. Licensed and insured. Long Branch, NJ. Call (732) 917-5197.">
+<meta name="description" content="Interior and exterior painting, siding and trim, floors and home remodeling in Long Branch, NJ. Call (732) 917-5197.">
 <meta name="theme-color" content="#faf6f1">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Jersey colors and floors LLC · Painting and floors in Long Branch, NJ">
-<meta property="og:description" content="Fresh color and solid floors. Licensed and insured. Text us a photo of the job for a quote.">
+<meta property="og:description" content="Fresh color and solid floors in Long Branch, NJ. Text us a photo of the job for a quote.">
 <meta property="og:url" content="https://10elizabethbell.github.io/jerseyColors/">
 <meta property="og:image" content="https://10elizabethbell.github.io/jerseyColors/assets/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -26,18 +26,17 @@
   --paper:#faf6f1;       /* page ground */
   --cream:#fbead6;       /* light band: the logo's own background */
   --card:#ffffff;
-  --field:#efe5da;       /* inputs and chips on the white form card */
+  --field:#ebdfd2;       /* inputs and chips on the white form card */
   --ink:#2b1d36;         /* headings, text on gold */
   --body:#3d2f47;        /* running text on light */
   --soft:#5f5068;        /* secondary text on light */
   --navy:#45305c;        /* mid plum: hero, close */
   --deep:#271a32;        /* how a job goes, footer (line texture) */
   --on-dark:#fbf7fb;
-  --on-dark-soft:#ddd0e2;
+  --on-dark-soft:#e5d3ef;
   --gold:#f2b322;        /* fills only; text on it is --ink */
   --gold-2:#f7c650;
   --gold-ink:#7f5300;    /* gold as text on light */
-  --orange:#dd6e14;      /* logo arch, decoration only */
   --teal:#0e6470;        /* form hover/focus outline, distinct from the gold fill */
   --line:rgba(43,29,54,.12);
   --error:#b3261e;
@@ -86,7 +85,7 @@ section{padding:64px 0}
 .btn svg{width:20px;height:20px;flex:none}
 .btn-primary{background:var(--gold);color:var(--ink);border-color:var(--gold)}
 .btn-ghost{background:transparent;color:var(--on-dark);border-color:rgba(251,247,251,.7)}
-.btn-line{background:transparent;color:var(--ink);border-color:rgba(43,29,54,.35)}
+.btn-line{background:transparent;color:var(--ink);border-color:rgba(43,29,54,.55)}
 
 /* ---------- Header ---------- */
 .top{background:var(--paper);color:var(--ink)}
@@ -107,9 +106,9 @@ section{padding:64px 0}
 }
 
 /* ---------- Hero ---------- */
-.hero{padding:0;position:relative;background-color:var(--navy);background-image:var(--texture);color:var(--on-dark);overflow:hidden}
+.hero{padding:56px 0 64px;position:relative;background-color:var(--navy);background-image:var(--texture);color:var(--on-dark);overflow:hidden}
 .hero .wrap{position:relative}
-.hero-copy{position:relative;z-index:1;display:grid;gap:20px;justify-items:start;padding-top:56px;padding-bottom:64px}
+.hero-copy{position:relative;z-index:1;display:grid;gap:20px;justify-items:start}
 .hero h1{color:#fff;font-size:clamp(42px,12vw,80px);line-height:1.02;max-width:12ch}
 /* H1 bounce-in (after lpmr.co.uk): each letter slides in from 50px right with a slight overshoot, 20ms apart */
 .hero h1 .w{display:inline-block;white-space:nowrap}
@@ -124,8 +123,9 @@ section{padding:64px 0}
 .rows li+li{border-top:1px solid var(--line)}
 .row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px;padding:12px 0;text-decoration:none;color:var(--ink);font:400 clamp(21px,5.6vw,26px)/1.15 var(--display)}
 .row:hover,.row:focus-visible{outline:none;background:none;box-shadow:none}
-.arrow{width:44px;height:44px;flex:none;border-radius:50%;display:grid;place-items:center;background:rgba(43,29,54,.07);color:var(--ink);transition:background-color .2s,color .2s}
-.arrow svg{width:18px;height:18px}
+.arrow{width:44px;height:44px;flex:none;border-radius:50%;display:grid;place-items:center;background:rgba(43,29,54,.07);color:var(--ink);transition:background-color .2s,color .2s,transform .12s}
+.arrow svg{width:18px;height:18px;transition:transform .2s cubic-bezier(.16,1,.3,1)}
+.row:active .arrow,.fb:active .arrow{transform:scale(.92)}
 .row:focus-visible .arrow{background:var(--gold);outline:3px solid var(--teal);outline-offset:3px}
 
 /* ---------- How a job goes ---------- */
@@ -137,9 +137,11 @@ section{padding:64px 0}
 
 /* ---------- Our work ---------- */
 .post{margin:32px 0 0;background:var(--card);border-radius:var(--r-card);padding:clamp(22px,6vw,36px);max-width:640px}
+.post blockquote{margin:0}
 .post p{font:400 clamp(24px,6.6vw,34px)/1.2 var(--display);color:var(--ink)}
 .post em{font-style:normal;color:var(--gold-ink)}
-.post cite{display:block;margin-top:16px;font:400 15px/1.4 var(--text);font-style:normal;color:var(--soft)}
+.post figcaption{margin-top:16px;font:400 15px/1.4 var(--text);color:var(--soft)}
+.post cite{font-style:normal}
 .fb{margin-top:20px;display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:76px;padding:14px 16px 14px 22px;border-radius:var(--r-card);background:var(--navy);color:var(--on-dark);text-decoration:none;font:400 clamp(19px,5.2vw,22px)/1.2 var(--display);max-width:640px}
 .fb:hover,.fb:focus-visible{outline:none;box-shadow:none}
 .fb .lbl{display:flex;align-items:center;gap:14px}
@@ -161,9 +163,12 @@ input::placeholder,textarea::placeholder{color:var(--soft)}
 input[type=text]:focus,textarea:focus{outline:none;border-color:var(--teal)}
 .chips{display:flex;flex-wrap:wrap;gap:10px}
 .chips input{position:absolute;width:1px;height:1px;opacity:0;margin:0}
-.chips label{display:inline-flex;align-items:center;min-height:48px;padding:0 18px;border-radius:var(--pill);background:var(--field);border:2px solid transparent;font:16px/1 var(--text);color:var(--ink);cursor:pointer;margin:0;transition:border-color .15s,background-color .15s,color .15s}
+.chips label{display:inline-flex;align-items:center;min-height:48px;padding:0 18px;border-radius:var(--pill);background:var(--field);border:2px solid transparent;font:16px/1 var(--text);color:var(--ink);cursor:pointer;margin:0;transition:border-color .15s,background-color .15s,color .15s,box-shadow .2s,transform .12s}
+.chips label:active{transform:scale(.97)}
 .chips input:focus-visible+label{outline:3px solid var(--teal);outline-offset:3px}
 .chips input:checked+label{background:var(--ink);color:#fff}
+.chips input:checked+label::before{content:"";width:12px;height:6px;margin-right:9px;border:solid currentColor;border-width:0 0 2.5px 2.5px;transform:translateY(-2px) rotate(-45deg)}
+.chips input.just+label{box-shadow:0 0 0 3px var(--gold)}
 .err{font-size:15px;color:var(--error)}
 .err:empty{display:none}
 .field.bad input[type=text]{border-color:var(--error)}
@@ -179,10 +184,9 @@ form .btn-primary:focus-visible{outline:3px solid var(--teal);outline-offset:3px
 @media (max-width:380px){.chips label{padding:0 14px}}
 
 /* ---------- Close ---------- */
-.close .who{margin-top:14px;font-size:clamp(18px,5vw,20px);color:var(--on-dark-soft)}
 .bigtel{display:inline-flex;align-items:center;gap:12px;margin-top:28px;font:400 clamp(30px,9vw,52px)/1 var(--display);text-decoration:none;color:var(--on-dark);min-height:56px;white-space:nowrap}
 .bigtel svg{width:.8em;height:.8em;flex:none;color:var(--gold)}
-.area{margin-top:22px;max-width:40ch}
+.area{margin-top:16px;max-width:40ch;font-size:clamp(17px,4.6vw,19px)}
 
 /* ---------- Footer ---------- */
 footer{background-color:var(--deep);background-image:var(--texture);color:var(--on-dark-soft);padding:48px 0 calc(96px + env(safe-area-inset-bottom));font-size:16px}
@@ -193,13 +197,19 @@ footer a{display:inline-flex;align-items:center;min-height:44px;color:var(--on-d
 footer small{font-size:14px}
 
 /* ---------- Floating text circle (one circle, never a bottom bar) ---------- */
-.float{position:fixed;z-index:15;right:calc(16px + env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom));width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:var(--ink);box-shadow:0 10px 28px rgba(39,26,50,.32);transform:translateY(120px);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
-.float.on{transform:none}
+.float{display:none;position:fixed;z-index:15;right:calc(16px + env(safe-area-inset-right));bottom:calc(16px + env(safe-area-inset-bottom));width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:var(--ink);box-shadow:0 10px 28px rgba(39,26,50,.32);transform:translateY(120px);transition:transform .22s cubic-bezier(.2,.8,.2,1)}
+.js .float{display:grid}
+.float.on{transform:none;transition-duration:.35s}
+.float.on:active{transform:scale(.94)}
 .float svg{width:26px;height:26px}
 .float:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:50%}
 
 /* ---------- Motion: one fade-up, only for things below the first screen ---------- */
-.js .rise{transition:opacity .4s ease-out,transform .4s ease-out}
+.js .rise{transition:opacity .4s cubic-bezier(.16,1,.3,1),transform .4s cubic-bezier(.16,1,.3,1)}
+.js .rows li.rise:nth-child(2){transition-delay:40ms}
+.js .rows li.rise:nth-child(3){transition-delay:80ms}
+.js .rows li.rise:nth-child(4){transition-delay:120ms}
+.js .rows li.rise:nth-child(5){transition-delay:160ms}
 .js .rise.below{opacity:0;transform:translateY(12px)}
 
 /* ---------- Desktop ---------- */
@@ -212,7 +222,7 @@ footer small{font-size:14px}
   .lang .long{display:inline}.lang .short{display:none}
   .tel{font-size:20px}
   section{padding:96px 0}
-  .hero-copy{padding-top:96px;padding-bottom:112px}
+  .hero{padding:96px 0 112px}
   .actions{grid-auto-flow:column;justify-content:start;width:auto}
   .actions .btn{min-width:230px}
   .rows{grid-template-columns:1fr 1fr;column-gap:56px}
@@ -224,7 +234,7 @@ footer small{font-size:14px}
   .hero-logo{display:block;width:340px;height:340px;border-radius:var(--r-card);box-shadow:0 24px 60px rgba(20,10,30,.35)}
   .work .wrap{display:grid;grid-template-columns:1fr 1.4fr;column-gap:64px;align-items:start}
   .work .post{margin-top:0;grid-column:2;grid-row:1/3}
-  .work .fb{grid-column:1;grid-row:2;align-self:end;margin-top:32px}
+  .work .fb{grid-column:1;grid-row:2;align-self:start;margin-top:28px}
   .ask .wrap{grid-template-columns:1fr 1.2fr;gap:64px;align-items:start}
   .ask .head{position:sticky;top:40px}
   .close .wrap{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:end}
@@ -241,6 +251,8 @@ footer small{font-size:14px}
   .btn-line:hover{border-color:var(--teal)}
   .row:hover .arrow{background:var(--gold);color:var(--ink)}
   .fb:hover .arrow{background:var(--gold);color:var(--ink)}
+  .row:hover .arrow svg,.fb:hover .arrow svg{transform:translateX(3px)}
+  .field.bad input[type=text]:hover{border-color:var(--error)}
   input[type=text]:hover,textarea:hover{border-color:var(--teal)}
   .chips label:hover{border-color:var(--teal)}
   form .btn-primary:hover{outline:3px solid var(--teal);outline-offset:3px}
@@ -248,9 +260,19 @@ footer small{font-size:14px}
   .bigtel:hover{color:var(--gold)}
   footer a:hover{color:var(--gold)}
 }
+/* landscape phones: keep the buttons on the first screen */
+@media (min-width:760px) and (max-height:500px){
+  .hero{padding:32px 0 40px}
+  .hero-copy{gap:14px}
+  .hero h1{font-size:52px}
+  section{padding:64px 0}
+}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .js .rise,.float,.btn{transition:none}
+  .js .rise,.float{transition:none}
+  .btn,.chips label,.arrow{transition:background-color .2s,color .2s,border-color .2s}
+  .btn:active,.chips label:active,.row:active .arrow,.fb:active .arrow,.float.on:active{transform:none}
+  .arrow svg,.row:hover .arrow svg,.fb:hover .arrow svg{transition:none;transform:none}
   .js .rise.below{opacity:1;transform:none}
   .hero h1 .c{animation:none;opacity:1;transform:none}
 }
@@ -260,8 +282,8 @@ footer small{font-size:14px}
 <!--
 THESIS: A painting and floors crew with no website gets a calm, orderly home online (after lpmr.co.uk) that says who they are, that they treat the house like their own, and how to get a quote by text.
 OWN-WORLD: The logo's own colours mapped onto the calm bands: warm paper and the logo's cream, mid plum (#45305c) and deep plum (#271a32, faint diagonal lines) from the logo outline, brush gold (#f2b322) as the one warm accent (fills only; #7f5300 as text on light). Cal Sans display, system body at 16/1.7.
-STORY: The visitor sees fresh color and floors in Long Branch from a licensed, insured crew, scans what they do, sees how a job goes and their latest finished job, and texts a quote request with a photo.
-FIRST VIEWPORT: Paper header with logo mark and wordmark left, ES toggle and tap-to-call number top right. Plum hero with line texture: eyebrow "Licensed and insured", "Fresh color and solid floors in Long Branch.", one promise line, two pill buttons (Get a quote, Text us a photo). Desktop adds the full logo on a card to the right.
+STORY: The visitor sees fresh color and floors in Long Branch from a crew that treats the house like its own, scans what they do, sees how a job goes and their latest finished job, and texts a quote request with a photo.
+FIRST VIEWPORT: Paper header with logo mark and wordmark left, ES toggle and tap-to-call number top right. Plum hero with line texture: eyebrow "Painting and flooring", "Fresh color and solid floors in Long Branch.", one promise line, two pill buttons (Get a quote, Text us a photo). Desktop adds the full logo on a card to the right.
 FORM: calm band system without a photo hero (no verified work photos: the only candidate is an unconfirmed roof tear-off with faces). The earlier paint-the-house world is in git history (dd2c66a) and is the opt-in signature runner-up.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 -->
@@ -286,7 +308,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <section class="hero" id="hero" aria-labelledby="h1">
   <div class="wrap">
     <div class="hero-copy">
-      <p class="eyebrow" data-i18n="eyebrow">Licensed and insured</p>
+      <p class="eyebrow" data-i18n="eyebrow">Painting and flooring</p>
       <h1 id="h1" data-i18n="h1">Fresh color and solid floors in <span class="accent">Long Branch.</span></h1>
       <p class="promise" data-i18n="promise">We treat your house like it's our own: everything covered, every edge clean, and nothing left behind but the new color.</p>
       <div class="actions">
@@ -294,7 +316,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         <a class="btn btn-ghost" id="textPhoto" data-sms="photo" href="sms:+17329175197?&amp;body=Hi%20Jersey%20Colors!%20I'd%20like%20a%20quote.%20Here's%20a%20photo%20of%20the%20job."><svg aria-hidden="true"><use href="#i-chat"/></svg><span data-i18n="ctaText">Text us a photo</span></a>
       </div>
     </div>
-    <img class="hero-logo" src="assets/logo.webp" alt="Jersey colors and floors LLC logo: a house with a paintbrush over orange, gold and teal arches" width="340" height="340" data-i18n-alt="logoAlt">
+    <img class="hero-logo" loading="lazy" src="assets/logo.webp" alt="Jersey colors and floors LLC logo: a house with a paintbrush over orange, gold and teal arches" width="340" height="340" data-i18n-alt="logoAlt">
   </div>
 </section>
 
@@ -319,7 +341,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <h2 id="h-how" class="rise" data-i18n="howH">How a job <span class="accent">goes.</span></h2>
     <ol class="steps">
       <li class="rise"><div><b data-i18n="st1">Send us a photo.</b><span data-i18n="st1p">A picture of the room or the outside and your town is enough to start.</span></div></li>
-      <li class="rise"><div><b data-i18n="st2">We come take a look.</b><span data-i18n="st2p">We walk it with you, listen to what you want, and give you a clear quote.</span></div></li>
+      <li class="rise"><div><b data-i18n="st2">We give you a clear quote.</b><span data-i18n="st2p">We listen to what you want and tell you plainly what it takes.</span></div></li>
       <li class="rise"><div><b data-i18n="st3">We leave it clean.</b><span data-i18n="st3p">Floors and furniture covered, clean lines, and we tidy up before we go.</span></div></li>
     </ol>
   </div>
@@ -329,8 +351,8 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <div class="wrap">
     <h2 id="h-work" class="rise" data-i18n="workH">Our work</h2>
     <figure class="post rise">
-      <p data-i18n="latest">“Just wrapped this full exterior in Monmouth County, NJ — siding, trim, the whole house <em>came out sharp</em> 🏠”</p>
-      <cite data-i18n="latestCite">From our latest job post</cite>
+      <blockquote><p data-i18n="latest">“Just wrapped this full exterior in Monmouth County, NJ — siding, trim, the whole house <em>came out sharp</em> 🏠”</p></blockquote>
+      <figcaption><cite data-i18n="latestCite">From our latest job post</cite></figcaption>
     </figure>
     <a class="fb rise" href="https://www.facebook.com/profile.php?id=61584889347399" rel="noopener">
       <span class="lbl"><svg aria-hidden="true"><use href="#i-fb"/></svg><span data-i18n="fb">See more of our work on Facebook</span></span>
@@ -344,7 +366,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <div class="head rise">
       <p class="eyebrow" data-i18n="qEyebrow">Big job or small</p>
       <h2 id="h-ask" data-i18n="qH">Get a quote</h2>
-      <p class="lede" data-i18n="qLede">Tell us what you need. A photo of the job helps us price it.</p>
+      <p class="lede" data-i18n="qLede">A photo of the job helps us price it.</p>
     </div>
     <form id="qform" class="rise" novalidate>
       <fieldset class="field" id="f-job">
@@ -372,7 +394,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         <label for="qNotes"><span data-i18n="qNotes">Anything else?</span> <small data-i18n="optional">(optional)</small></label>
         <textarea id="qNotes" name="notes" maxlength="600" data-i18n-ph="qNotesPh" placeholder="Rooms, colors, when you'd like it done"></textarea>
       </div>
-      <button class="btn btn-primary" type="submit"><svg aria-hidden="true"><use href="#i-chat"/></svg><span data-i18n="qSend">Text us this quote</span></button>
+      <button class="btn btn-primary" type="submit"><svg aria-hidden="true"><use href="#i-chat"/></svg><span data-i18n="qSend">Text us this request</span></button>
       <p class="after" data-i18n="qHelp">Opens your messages with this written out. Add a photo before you send.</p>
       <div class="done" id="done" role="status" tabindex="-1" hidden>
         <p data-i18n="doneP">Didn't open your messages? Send it from here:</p>
@@ -390,9 +412,8 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <section class="on-navy close" aria-labelledby="h-close">
   <div class="wrap">
     <div class="rise">
-      <h2 id="h-close">Jersey colors and floors LLC</h2>
-      <p class="who" data-i18n="who">Painting and floors across New Jersey.</p>
-      <p class="area" data-i18n="area">Based in Long Branch and working across Monmouth County. Not sure we cover your town? Call and ask.</p>
+      <h2 id="h-close">Jersey colors <span class="accent">and floors LLC</span></h2>
+      <p class="area" data-i18n="area">Licensed and insured. Based in Long Branch and working across Monmouth County. Not sure we cover your town? Call and ask.</p>
     </div>
     <a class="bigtel rise" href="tel:+17329175197"><svg aria-hidden="true"><use href="#i-phone"/></svg>(732)&nbsp;917-5197</a>
   </div>
@@ -426,7 +447,7 @@ window.JC = {};
 (function () {
   var ES = {
     tagline: 'and Floors LLC',
-    eyebrow: 'Con licencia y asegurados',
+    eyebrow: 'Pintura y pisos',
     h1: 'Color fresco y pisos firmes en <span class="accent">Long Branch.</span>',
     promise: 'Cuidamos tu casa como si fuera nuestra: todo cubierto, cada borde limpio, y lo único que dejamos es el color nuevo.',
     ctaQuote: 'Pide tu cotización', ctaText: 'Mándanos una foto',
@@ -435,23 +456,24 @@ window.JC = {};
     svcH: 'Lo que hacemos', s1: 'Pintura interior', s2: 'Pintura exterior', s3: 'Siding y molduras', s4: 'Pisos', s5: 'Remodelación de casas',
     howH: 'Cómo <span class="accent">trabajamos.</span>',
     st1: 'Mándanos una foto.', st1p: 'Una foto del cuarto o de afuera y tu ciudad bastan para empezar.',
-    st2: 'Vamos a verlo.', st2p: 'Lo recorremos contigo, escuchamos lo que quieres y te damos una cotización clara.',
+    st2: 'Te damos una cotización clara.', st2p: 'Escuchamos lo que quieres y te decimos claramente lo que lleva.',
     st3: 'Lo dejamos limpio.', st3p: 'Pisos y muebles cubiertos, líneas limpias, y recogemos todo antes de irnos.',
     workH: 'Nuestro trabajo',
     latest: '“Acabamos de terminar este exterior completo en el condado de Monmouth, NJ: siding, molduras, toda la casa <em>quedó impecable</em> 🏠”',
     latestCite: 'De nuestra última publicación (traducida)',
     fb: 'Mira más de nuestro trabajo en Facebook',
-    qEyebrow: 'Grande o pequeño', qH: 'Pide tu cotización', qLede: 'Cuéntanos qué necesitas. Una foto del trabajo nos ayuda a darte el precio.',
+    qEyebrow: 'Grande o pequeño', qH: 'Pide tu cotización', qLede: 'Una foto del trabajo nos ayuda a darte el precio.',
     qJob: '¿Qué necesitas?', qName: 'Tu nombre', qTown: 'Tu ciudad', qTownPh: 'p. ej. Long Branch', qNotes: '¿Algo más?', optional: '(opcional)',
     qNotesPh: 'Cuartos, colores, para cuándo lo quieres',
-    qSend: 'Mándanos esto por texto', qHelp: 'Abre tus mensajes con esto ya escrito. Agrega una foto antes de enviar.',
+    qSend: 'Mándanos esta solicitud por texto', qHelp: 'Abre tus mensajes con esto ya escrito. Agrega una foto antes de enviar.',
     doneP: '¿No se abrieron tus mensajes? Envíalo desde aquí:', openMsg: 'Abrir en Mensajes', copy: 'Copiar mensaje', copied: 'Copiado', orCall: 'O llámanos al',
-    who: 'Pintura y pisos en todo Nueva Jersey.',
-    area: 'Estamos en Long Branch y trabajamos en todo el condado de Monmouth. ¿No sabes si llegamos a tu ciudad? Llama y pregunta.',
+    area: 'Con licencia y asegurados. Estamos en Long Branch y trabajamos en todo el condado de Monmouth. ¿No sabes si llegamos a tu ciudad? Llama y pregunta.',
     footArea: 'Long Branch, Nueva Jersey',
-    floatAria: 'Escríbele a Jersey Colors'
+    floatAria: 'Escríbele a Jersey Colors',
+    selected: 'Seleccionado, ahora cópialo',
+    title: 'Jersey colors and floors LLC · Pintura y pisos en Long Branch, NJ'
   };
-  var EN = { copied: 'Copied' };
+  var EN = { copied: 'Copied', selected: 'Selected, now copy it', title: document.title };
   document.querySelectorAll('[data-i18n]').forEach(function (n) { EN[n.dataset.i18n] = n.innerHTML; });
   document.querySelectorAll('[data-i18n-aria]').forEach(function (n) { EN[n.dataset.i18nAria] = n.getAttribute('aria-label'); });
   document.querySelectorAll('[data-i18n-ph]').forEach(function (n) { EN[n.dataset.i18nPh] = n.getAttribute('placeholder'); });
@@ -470,6 +492,7 @@ window.JC = {};
     document.querySelectorAll('[data-i18n-ph]').forEach(function (n) { var v = D[n.dataset.i18nPh]; if (v != null) n.setAttribute('placeholder', v); });
     document.querySelectorAll('[data-i18n-alt]').forEach(function (n) { var v = D[n.dataset.i18nAlt]; if (v != null) n.setAttribute('alt', v); });
     document.getElementById('h1').removeAttribute('aria-label');
+    document.title = D.title;
     var other = lang === 'es' ? 'en' : 'es';
     btn.setAttribute('lang', other);
     btn.setAttribute('aria-label', other === 'es' ? 'Ver en español' : 'View in English');
@@ -571,12 +594,20 @@ window.JC = {};
   JC.onLang.push(function () { show(false); [['f-job','eJob'], ['f-name','eName'], ['f-town','eTown']].forEach(function (p) { setErr(p[0], p[1], null, ''); }); });
   // a service row pre-selects its job in the form
   document.querySelectorAll('.row[data-job]').forEach(function (a) {
-    a.addEventListener('click', function () { var c = f.querySelector('input[value="' + a.dataset.job + '"]'); if (c) { c.checked = true; setErr('f-job', 'eJob', null, ''); } });
+    a.addEventListener('click', function () {
+      var c = f.querySelector('input[value="' + a.dataset.job + '"]');
+      if (!c) return;
+      c.checked = true; setErr('f-job', 'eJob', null, '');
+      // a brief gold ring shows which job the row picked
+      c.classList.add('just'); setTimeout(function () { c.classList.remove('just'); }, 1200);
+    });
   });
   document.getElementById('copyMsg').addEventListener('click', function () {
     var b = this;
-    function ok() { b.textContent = JC.t('copied'); setTimeout(function () { b.textContent = JC.t('copy'); }, 2200); }
-    function sel() { var r = document.createRange(); r.selectNodeContents(msg); var w = getSelection(); w.removeAllRanges(); w.addRange(r); }
+    function say(k) { clearTimeout(b._t); b.textContent = JC.t(k); b._t = setTimeout(function () { b.textContent = JC.t('copy'); }, 2200); }
+    function ok() { say('copied'); }
+    // clipboard blocked (some in-app browsers): select the text so a long-press copies it
+    function sel() { var r = document.createRange(); r.selectNodeContents(msg); var w = getSelection(); w.removeAllRanges(); w.addRange(r); say('selected'); }
     try { navigator.clipboard.writeText(msg.textContent).then(ok, sel); } catch (e) { sel(); }
   });
 })();

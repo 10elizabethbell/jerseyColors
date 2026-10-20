@@ -2,13 +2,13 @@
 
 ## Platform
 - Platform: `web`
-- Stack: static single-file HTML/CSS/JS (`index.html`), no frameworks, no tracking, system font stack. Hosted on GitHub Pages.
+- Stack: static single-file HTML/CSS/JS (`index.html`), no frameworks, no tracking. Cal Sans (Google Fonts) for headings, system stack for body. Hosted on GitHub Pages.
 
 ## Users
 - **Primary:** New Jersey homeowners (Monmouth County first) who found the business on Facebook and open the link on a phone, inside Facebook's in-app browser. They want to know: do they do my kind of job, is the work good, how do I get a quote.
 - **Bilingual:** the owner's own self-description is in Spanish; the audience is inferred to be English and Spanish speaking. The site offers both.
 - **Secondary:** the owner, who sees the site first and has to recognise their business in it.
-- Audience age: not flagged as 40+ (general homeowners), so the house signature motion applies.
+- Audience age: not flagged as 40+ (general homeowners), so the calm style's motion applies (hero H1 bounce-in, one fade-up, floating text circle).
 
 ## Purpose
 Give a painting and flooring crew with no website a real home online that turns Facebook curiosity into a quote request by text or call.
@@ -25,7 +25,7 @@ A crew that paints and refinishes homes across New Jersey and treats the house l
 ## Brand commitments
 - Name exactly "Jersey colors and floors LLC"; short form "Jersey Colors". Never "Sherlock".
 - Logo (from the Facebook page profile image, 2026-10-18): a soft 3D illustration of a plum-outlined house with a cream wall, an orange "LLC" badge, a gold paintbrush with plum bristles, and rainbow arches in orange, gold and teal over the wordmark "JERSEY / COLORS AND FLOORS" on cream.
-- Palette carried from the logo: plum, orange, gold, teal, cream. Page ground never black.
+- Palette carried from the logo onto the calm band roles (since the 2026-10-19 revamp): warm paper and the logo's cream for light bands, mid and deep plum for dark bands, brush gold as the one warm accent (fills only). Teal is the form focus colour. Page ground never black.
 - Voice: a crew, so "we / our". Plain and warm, about care for the customer's home.
 
 ## Evidence on hand
@@ -37,5 +37,5 @@ A crew that paints and refinishes homes across New Jersey and treats the house l
 ## Principles
 1. Phone first: the first phone screen says who, what, where and how to reach them.
 2. Only true things: no invented reviews, prices, years, photos or towns.
-3. The page lets the visitor do the trade's work: paint a house.
+3. Calm and orderly (the house calm band style): one clear headline, few things moving.
 4. Fewer contact options, each one obvious.
