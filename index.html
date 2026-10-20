@@ -540,6 +540,10 @@ window.JC = {};
     document.getElementById(field).classList.toggle('bad', !!text);
     if (input) input.setAttribute('aria-invalid', text ? 'true' : 'false');
   }
+  var send = f.querySelector('button[type=submit]'), help = f.querySelector('.after');
+  // the fallback replaces the send button, so two buttons that send the same text are never shown together
+  function show(on) { done.hidden = !on; send.hidden = on; help.hidden = on; }
+  f.addEventListener('input', function () { if (!done.hidden) show(false); });
   f.addEventListener('submit', function (e) {
     e.preventDefault();
     var lang = JC.lang, name = f.name.value.trim(), town = f.town.value.trim();
@@ -560,11 +564,11 @@ window.JC = {};
     document.getElementById('openMsg').href = JC.sms(body);
     location.href = JC.sms(body);
     // if no messages app opened (desktop, some in-app browsers), show the ways to send it instead
-    setTimeout(function () { done.hidden = false; done.focus(); }, 900);
+    setTimeout(function () { show(true); done.focus(); }, 900);
   });
   ['name', 'town'].forEach(function (n) { f[n].addEventListener('input', function () { if (f[n].value.trim()) setErr(n === 'name' ? 'f-name' : 'f-town', n === 'name' ? 'eName' : 'eTown', f[n], ''); }); });
   f.addEventListener('change', function (e) { if (e.target.name === 'job') setErr('f-job', 'eJob', null, ''); });
-  JC.onLang.push(function () { done.hidden = true; [['f-job','eJob'], ['f-name','eName'], ['f-town','eTown']].forEach(function (p) { setErr(p[0], p[1], null, ''); }); });
+  JC.onLang.push(function () { show(false); [['f-job','eJob'], ['f-name','eName'], ['f-town','eTown']].forEach(function (p) { setErr(p[0], p[1], null, ''); }); });
   // a service row pre-selects its job in the form
   document.querySelectorAll('.row[data-job]').forEach(function (a) {
     a.addEventListener('click', function () { var c = f.querySelector('input[value="' + a.dataset.job + '"]'); if (c) { c.checked = true; setErr('f-job', 'eJob', null, ''); } });
