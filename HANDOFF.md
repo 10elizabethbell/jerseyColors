@@ -1,69 +1,97 @@
 # Jersey colors and floors LLC — handoff at ~60%
 
-**Live:** https://10elizabethbell.github.io/jerseyColors/ · **Repo:** https://github.com/10elizabethbell/jerseyColors · **Built:** 2026-10-18 from Muse brief (run 2026-10-18, found via NJ contractor Facebook groups)
+**Live:** https://10elizabethbell.github.io/jerseyColors/ · **Repo:** https://github.com/10elizabethbell/jerseyColors · **Built:** 2026-10-18 from Muse brief (run 2026-10-18, found via NJ contractor Facebook groups) · **Revamped:** 2026-10-19 to the calm band style
+
+## Revamp (2026-10-19): what changed
+The business hadn't been contacted yet, so the site was rebuilt end to end under the new house default, the calm band style from lpmr.co.uk (`calm-photo-style.md`). It started from DPG's `index.html`.
+- **Look:** the old cream "paint the house" world is gone. The page is now:
+  - warm paper (#faf6f1) and the logo's cream (#fbead6) for the light bands
+  - mid plum (#45305c) for the hero and closing band, and deep plum (#271a32) with the faint line texture for "How a job goes" and the footer
+  - brush gold (#f2b322) as the only accent, used as a fill; #7f5300 when it has to be text on light
+  - teal (#0e6470) only for form hover and focus
+  - Cal Sans headings, system body text, 24px cards, pill buttons
+- **Motion:**
+  - The hero H1 bounces in letter by letter and is put back as plain text after about 1.7s.
+  - Everything below the first screen does one quiet 12px fade-up.
+  - The service rows stagger by 40ms each.
+  - A 60px gold text circle appears after the hero and hides while the form is on screen.
+  - There's no canvas any more and nothing loops. All of it shows at once under reduced motion and without JS.
+- **Structure:**
+  - Header: logo mark and wordmark, ES toggle, phone top right.
+  - Hero, on plain plum because there are no usable photos: eyebrow "Painting and flooring", H1 "Fresh color and solid floors in Long Branch.", the promise line, then **Get a quote** and an outlined **Text us a photo**. Desktop also shows the full logo on a card.
+  - What we do: 5 rows. Tapping one jumps to the form with that job ticked, and the chip gets a brief gold ring.
+  - How a job goes: 3 steps.
+  - Our work: the latest post's caption on a card, then the big "See more of our work on Facebook" row.
+  - Get a quote: the form card on cream.
+  - Closing band: the name, "Licensed and insured" plus the area, and the big number.
+  - Footer: name, area, phone, Facebook.
+- **Form:**
+  - Fields: job chips (ticked chips get a check mark), name, town, and optional notes.
+  - The submit button is "Text us this request" and it builds the pre-written text.
+  - If the messages app doesn't open, the send button is replaced by the message plus **Open in Messages**, **Copy message** and "Or call us at (732) 917-5197". The send button disappears so two send buttons never show together.
+- **Spanish:** same EN/ES toggle and `?lang=es` link as before, and the page title now switches too.
+- **Truth fixes found in the review:**
+  - "Licensed and insured" is no longer the hero eyebrow or in the meta and og descriptions. It's now one clause in the closing band. See Assumptions.
+  - Step 2 no longer promises a site visit nobody confirmed. It was "We come take a look… We walk it with you" and is now "We give you a clear quote."
+- **og image:** a new 1200×630 shot of the plum hero.
 
 ## What's built
-- One page, `index.html`, phone-first, bilingual: an **EN/ES toggle** sits in the header. Spanish shows automatically for Spanish-language phones and with `?lang=es`, so you can send the owner a Spanish link.
-- **World:** the logo's own world. Cream ground sampled from the logo, plum roofline, gold brush, orange/gold/teal arches, clapboard siding. Sections in plum and teal are joined by ragged wet-brush seams that brush in as you scroll.
-- **Signature element:** the hero house paints itself, one coat per color: teal, then gold, orange and cream, on a loop. You can drag a finger in any direction (or move a mouse) to take the brush, and the four swatches change the color. After about 3 seconds idle the brush carries on. After a good amount of your own painting, the hint changes to "Looking sharp." ("¡Quedó impecable!"), echoing their post.
-- **Sections:** header (logo mark + wordmark, ES, tap-to-call number top-right) → hero (headline, promise, **Get a quote** + outlined **Text us a photo**) → What we do (5 rows, each opens a pre-filled text for that service) → How a job goes (3 steps) → Our work (their latest post, then a big Facebook button right under it) → Get a quote form → closing name block → footer (name, phone, Facebook).
-- **Quote form:** name, job chips, town, when, notes. It builds a pre-filled text to (732) 917-5197, and shows the message with a **Copy message** button and an "Or call us" link in case `sms:` is blocked.
-- Icons (favicon, iPhone home-screen icon) are cut from the real logo. The og image (1200×630) is a shot of the hero mid-paint.
+One page, `index.html`, single file. The only external resource is Cal Sans from Google Fonts. Phone first: checked at 320, 360, 390 and 430 wide, 844×390 landscape, and 1440, in Chrome and WebKit. There's no sideways scroll, every tap target is at least 44px, and the first screen shows the header number, the H1 and both buttons. All contact goes through `CONFIG.PHONE` (+17329175197). There is no email anywhere because none was found.
 
 ## Assumptions I made
-- **Location is Long Branch, not Hammonton.** Their Facebook page (og meta, fetched 2026-10-18) says "Jersey colors and floors LLC | Long Branch NJ". The brief's Hammonton address, hours (daily 9–5) and phone came from an Instagram location pin named "Jersey colors painting company", which may be another listing. I left the address and hours off the page.
-- **"Licensed and insured" is on the page.** The brief said not to claim it because nothing was published. But their own Facebook page says "Professional painting & flooring company serving New Jersey. Licensed and insured. High-quality work. HIC License:…", so the brief's reason no longer holds. It's one line in the closing section, easy to cut.
-- **Phone (732) 917-5197** comes only from that Instagram pin. A web search found no other listing. The 732 area code fits Long Branch, so I used it.
-- **"We / our"** voice, because they're an LLC crew and post as a company.
-- **Copy I wrote and the owner should confirm:**
-  - the promise ("We treat your house like it's our own: everything covered, every edge clean…")
-  - step 2 ("We come take a look… give you a clear quote")
-  - step 3 ("Floors and furniture covered… we clean up before we leave")
-- **Services** are drawn from the Facebook ("painting & flooring"), the Instagram self-description ("remodelaciones de casa, pintura") and the latest post ("siding, trim"): interior painting, exterior painting, siding & trim, floors, home remodeling.
-- **"Our work" quote** is their post caption, verbatim with the 🏠. The Spanish version is my translation and is labelled "(traducida)".
-- **Font:** system stack with `ui-rounded`, so iPhones get SF Pro Rounded (close to the logo lettering) and Android gets the system heavy sans.
+- **"Licensed and insured" stays, but quietly.** Muse's brief said don't claim it, because Muse found nothing published. The business's own Facebook page description says "Professional painting & flooring company serving New Jersey. Licensed and insured. High-quality work. HIC License:…" (re-checked 2026-10-19 with the crawler fetch). Their own words make it fair to repeat. But the HIC number is cut off, and NJ expects the HIC number on contractor advertising, websites included. So the claim is one clause in the closing band only, not up top. **Get the HIC number before this goes to the owner**, then add it next to the claim (or move the claim back into the hero eyebrow).
+- **Location is Long Branch** (Facebook title "Jersey colors and floors LLC | Long Branch NJ"). The brief's Hammonton address and daily 9–5 hours come from an Instagram pin named "Jersey colors painting company" and may belong to another listing, so neither is shown.
+- **Phone (732) 917-5197** comes only from that Instagram pin. The 732 area code fits Long Branch.
+- **"We / our" voice**, because they're an LLC crew.
+- **Copy the owner should confirm** (written by me, not theirs):
+  - the promise line
+  - step 2 ("We listen to what you want and tell you plainly what it takes")
+  - step 3 ("Floors and furniture covered, clean lines, and we tidy up before we go")
+  - the "Big job or small" eyebrow
+- **Services** are drawn from Facebook ("painting & flooring"), Instagram ("remodelaciones de casa, pintura") and the latest post ("siding, trim").
+- **The Spanish caption** of their post is my translation, labelled "(traducida)".
+- **Colours:** the logo's plum, gold and cream mapped onto the calm roles. The logo's orange and teal arches aren't used as page colours (the calm style allows one accent), except teal for form focus.
 
 ## Placeholders and gaps
-- **No work photos.** The only group-post image (`src-assets/work-01.jpg`) shows a roof tear-off in progress with workers' faces visible. It doesn't match the "finished exterior" caption, and its upload ID is older than their page, so I couldn't confirm it's theirs and left it out. The second post's image was Facebook's stock group illustration. "Our work" is the caption plus the Facebook button for now. **Photos are the #1 thing to get.**
-- No email (none found), so there's none in the footer.
-- No HIC registration number: Facebook truncates it after "HIC License:". NJ expects it on contractor ads, websites included, so get it and add it to the closing line.
-- No reviews, prices, owner name, or years in business, and nothing about them on the page.
-- **Texting is unconfirmed.** "Text us a photo", the service rows and the form all open a text. The number in the header is the call path.
-- No Google Maps listing.
+- **No work photos, so no photo hero.** The only group-post image (`src-assets/work-01.jpg`) shows a roof tear-off in progress with workers' faces. It doesn't match the "finished exterior" caption and can't be confirmed as theirs. The other image is Facebook's stock group art. So the hero is the plain textured plum band, which is the calm style's no-photo rule. **Photos are the #1 thing to get.** A wide finished exterior would go straight into the hero under a plum overlay, and the rest into 4:5 work cards above the Facebook row.
+- No email, so there's none in the footer.
+- No HIC number (see above).
+- No reviews, prices, owner name, years in business or hours on the page.
+- **Texting is unconfirmed.** "Text us a photo", the circle and the form all open a text. The header number and the closing band are the call path.
 
 ## Questions for the owner
 - Is (732) 917-5197 right, and does it take texts?
 - What's the HIC registration number?
 - Can we have 6–10 photos of finished jobs, plus any before/after pairs (same spot)? The Monmouth County exterior first.
-- Is the Hammonton address/Instagram pin yours? Which towns do you want to work in?
-- Do you come out to look before quoting, and is the quote free? I avoided saying "free".
-- Which matters most to you: exterior painting, interiors, or floors?
-- Do you want hours on the site?
-- An email for the footer?
-- What's your first name, so the page can say who they'll deal with?
+- Do you come out to see the job before quoting? Is the quote free? (The page says neither.)
+- Is the Hammonton address and Instagram pin yours? Which towns do you want to work in?
+- Hours on the site? An email for the footer? Your first name, so the page can say who customers will deal with?
+- Which matters most: exterior painting, interiors, or floors?
 
 ## Ideas not built (yours to pick)
-- **Floors have no visual presence** (finish reviewer's note): half the name and the headline's second line. Options:
-  - a hardwood-plank ground for the quote section, with a sanding sweep that turns dull boards glossy as you drag (the runner-up world);
-  - or a seam that's a floor edge instead of a brush edge.
-- Once photos arrive, put them in "Our work" framed as paint-chip cards or inside the house's windows, with before/after sliders (plain divider) if pairs exist.
-- **Overdrive:** when a coat finishes, shutters/door tint to the next swatch.
-- **Delight:** a little "dip" wiggle of the brush when a swatch is tapped.
-- Logo-style soft 3D on the arches (they're flat bands with a soft drop shadow now).
-- Tunables are at the top of the hero script:
-  - `AUTO_SPEED` (560)
-  - `ROW` (20)
-  - `BRUSH_W` (32)
-  - `IDLE_RESUME` (3200 ms)
-  - `PASS_PAUSE` (900 ms)
-  - `REWARD_AT` (2600)
-- Atkinson Hyperlegible or a self-hosted rounded face if you ever drop the system-font rule.
+- **Runner-up signature (opt-in): the paint-the-house hero.** In the original build (git `dd2c66a`), the hero house painted itself coat by coat and you could drag to paint it. It could come back as the hero art on desktop, or below the hero, if you want a living element.
+- Other worlds from their trade:
+  - hardwood planks that a sanding sweep turns glossy (would give floors a visual presence)
+  - a paint-chip fan for the services
+  - a wet-brush seam between bands
+- **Impeccable findings kept by house rule:**
+  - The craft floor bans eyebrows; there are three quiet ones (hero, services, quote).
+  - The detector flags the band texture as "repeating stripes" and the warm paper and cream as a "cream palette".
+  - The H1 bounce-in, the floating circle and Cal Sans are also house features.
+  - The detector ignores are recorded in `.impeccable/config.json` (not committed).
+- **From the review, not done:**
+  - **Self-host Cal Sans** (it's OFL licensed). That would avoid a render-blocking Google request and a font swap mid-bounce. The skill says Cal Sans comes from Google Fonts, so I left it.
+  - **Sticky header with a scroll shadow** (calm kit item 1). DPG doesn't do it either.
+  - **Hide the floating circle while the service rows are in view.** It overlaps a row arrow as it passes, but the whole row is the link.
+  - Service rows on a plum band (the kit's version) instead of on paper.
+  - A View Transition that carries a tapped service row into its form chip.
+  - A scroll-driven gold fill on the step numbers.
+  - A before/after slider once pairs exist.
+- **Desktop logo card:** the finish reviewer called it the weakest part of the desktop first screen (it repeats the header mark). It goes once a hero photo exists.
+- Atkinson Hyperlegible for body text, if you ever want it.
 
 ## Not verified
-- Real-device touch (tested only with synthetic pointer events in headless Chrome at 320/360/390/430/1024/1440: vertical and sideways drags paint).
-- The real SMS handoff on iOS and Android, and inside Facebook's in-app browser.
-- Clipboard copy inside the FB in-app browser (it falls back to selecting the text).
-- Frame rate on old Android phones (spring runs in fixed substeps, DPR capped at 1.75, loop pauses off-screen).
-- WebKit/Safari rendering (only Chrome was run).
-- Detector notes: Impeccable's detector ran in its normal (non-degraded) mode. Three findings were left standing as false positives or deliberate choices: the hint text over the lawn, the cream ground (the logo's own), and the hairline above the service rows.
-- `.impeccable/config.json` (detector ignore notes) was in two early commits before I untracked it. It holds only lint-ignore reasons, no prospect notes, and `brief.md`, `src-assets/` and `.claude-claimed` were never committed.
+- Real-device touch, and the real SMS handoff on iOS and Android, including inside Facebook's in-app browser.
+- Clipboard copy inside the FB in-app browser. It falls back to selecting the text and says "Selected, now copy it".
+- Form fields are a filled #ebdfd2 on a white card, about 1.2:1. That's the same compromise as DPG; the visible labels identify the fields.
+- `.impeccable/config.json` (detector ignore notes) was in two early commits from the first build. It holds only lint reasons, nothing private. `brief.md`, `src-assets/` and `.claude-claimed` were never committed (re-checked 2026-10-19).
