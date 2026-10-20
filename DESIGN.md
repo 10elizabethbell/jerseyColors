@@ -1,377 +1,447 @@
 ---
 name: Jersey colors and floors LLC
-description: Single-page phone-first site for a New Jersey painting and floors crew, built in the logo's colors around a house the visitor can paint.
+description: Phone-first single page for a New Jersey painting and floors crew, set in Ellie's calm band style with the logo's paper, cream, plum and brush gold.
 colors:
-  plum: "#33223f"
-  plum-deep: "#271a31"
-  orange-deep: "#b9520a"
-  orange-text: "#a34606"
   gold: "#f2b322"
-  teal: "#0e5a64"
-  teal-ink: "#0b4b54"
-  cream: "#fcebd7"
-  paper: "#fff8ee"
-  ink: "#2b1f33"
-  ink-soft: "#5c4a63"
-  on-plum-soft: "#e9d6e8"
-  line: "rgba(51,34,63,.16)"
-  field-border: "rgba(51,34,63,.28)"
-  focus: "#0e5a64"
-  paint-teal: "#3f8c91"
-  paint-gold: "#e8b03a"
-  paint-orange: "#d8703a"
-  paint-cream: "#f3e4cc"
-  floor-brown: "#8a5a35"
-  arch-orange: "#dd6e14"
-  roof-plum: "#3a2a40"
-  trim-cream: "#f7ecdc"
-  lawn: "#4f6a2c"
-  step-orange: "#e9884a"
-  step-teal: "#7fc1c0"
-  quote-highlight: "#ffd36b"
-  on-teal-soft: "#cfe3e2"
-  on-plum-muted: "#c9b7c9"
-  placeholder: "#7d6b80"
-  error: "#9a2b0c"
-  error-line: "#b33a12"
-  paint-bead: "rgba(0,0,0,.2)"
-  hint-shadow: "rgba(20,28,8,.8)"
+  gold-2: "#f7c650"
+  gold-ink: "#7f5300"
+  teal: "#0e6470"
+  paper: "#faf6f1"
+  cream: "#fbead6"
+  card: "#ffffff"
+  field: "#ebdfd2"
+  ink: "#2b1d36"
+  body: "#3d2f47"
+  soft: "#5f5068"
+  navy: "#45305c"
+  deep: "#271a32"
+  on-dark: "#fbf7fb"
+  on-dark-soft: "#e5d3ef"
+  error: "#b3261e"
+  line: "rgba(43,29,54,.12)"
+  ink-wash: "rgba(43,29,54,.06)"
+  ink-wash-2: "rgba(43,29,54,.07)"
+  ink-outline: "rgba(43,29,54,.55)"
+  on-dark-outline: "rgba(251,247,251,.7)"
+  white-wash-10: "rgba(255,255,255,.1)"
+  white-wash-12: "rgba(255,255,255,.12)"
+  white-wash-14: "rgba(255,255,255,.14)"
+  texture-line: "rgba(255,255,255,.035)"
+  shadow-float: "rgba(39,26,50,.32)"
+  shadow-logo: "rgba(20,10,30,.35)"
 typography:
   display:
-    fontFamily: "ui-rounded, \"SF Pro Rounded\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
-    fontSize: "clamp(46px, 14vw, 104px)"
-    fontWeight: 900
-    lineHeight: 0.98
-    letterSpacing: "-0.02em"
+    fontFamily: "\"Cal Sans\", \"Avenir Next\", \"Segoe UI\", system-ui, sans-serif"
+    fontSize: "clamp(42px, 12vw, 80px)"
+    fontWeight: 400
+    lineHeight: 1.02
+    letterSpacing: "-0.005em"
+  display-landscape:
+    fontFamily: "\"Cal Sans\", \"Avenir Next\", \"Segoe UI\", system-ui, sans-serif"
+    fontSize: "52px"
+    fontWeight: 400
+    lineHeight: 1.02
+  phone-display:
+    fontFamily: "\"Cal Sans\", \"Avenir Next\", \"Segoe UI\", system-ui, sans-serif"
+    fontSize: "clamp(30px, 9vw, 52px)"
+    fontWeight: 400
+    lineHeight: 1
   headline:
-    fontFamily: "ui-rounded, \"SF Pro Rounded\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
-    fontSize: "clamp(34px, 9vw, 60px)"
-    fontWeight: 900
-    lineHeight: 0.98
-    letterSpacing: "-0.02em"
-  title:
-    fontFamily: "ui-rounded, \"SF Pro Rounded\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
-    fontSize: "clamp(22px, 6.2vw, 32px)"
-    fontWeight: 900
-    lineHeight: 1.05
-    letterSpacing: "-0.01em"
+    fontFamily: "\"Cal Sans\", \"Avenir Next\", \"Segoe UI\", system-ui, sans-serif"
+    fontSize: "clamp(30px, 7.6vw, 48px)"
+    fontWeight: 400
+    lineHeight: 1.08
+    letterSpacing: "-0.005em"
   quote:
-    fontFamily: "ui-rounded, \"SF Pro Rounded\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
-    fontSize: "clamp(24px, 6.6vw, 40px)"
-    fontWeight: 800
-    lineHeight: 1.15
-    letterSpacing: "-0.01em"
-  body:
-    fontFamily: "system-ui, -apple-system, \"Segoe UI\", \"Helvetica Neue\", Arial, sans-serif"
-    fontSize: "17px"
+    fontFamily: "\"Cal Sans\", \"Avenir Next\", \"Segoe UI\", system-ui, sans-serif"
+    fontSize: "clamp(24px, 6.6vw, 34px)"
     fontWeight: 400
-    lineHeight: 1.55
-  label:
-    fontFamily: "ui-rounded, \"SF Pro Rounded\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
-    fontSize: "16px"
-    fontWeight: 800
     lineHeight: 1.2
-    letterSpacing: "0.03em"
-  button:
-    fontFamily: "ui-rounded, \"SF Pro Rounded\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
-    fontSize: "17px"
-    fontWeight: 900
-    lineHeight: 1.12
-    letterSpacing: "0.02em"
-  display-close:
-    fontFamily: "ui-rounded, \"SF Pro Rounded\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
-    fontSize: "clamp(38px, 11vw, 84px)"
-    fontWeight: 900
-    lineHeight: 0.98
-  quote-desktop:
-    fontFamily: "ui-rounded, \"SF Pro Rounded\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
-    fontSize: "clamp(24px, 3.6vw, 52px)"
-    fontWeight: 800
-    lineHeight: 1.15
-  step-title:
-    fontFamily: "ui-rounded, \"SF Pro Rounded\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
-    fontSize: "clamp(22px, 6vw, 28px)"
-    fontWeight: 900
-    lineHeight: 0.98
-  promise:
-    fontFamily: "system-ui, -apple-system, \"Segoe UI\", \"Helvetica Neue\", Arial, sans-serif"
-    fontSize: "clamp(17px, 4.6vw, 20px)"
+  title:
+    fontFamily: "\"Cal Sans\", \"Avenir Next\", \"Segoe UI\", system-ui, sans-serif"
+    fontSize: "clamp(21px, 5.6vw, 26px)"
     fontWeight: 400
-    lineHeight: 1.55
+    lineHeight: 1.15
+  title-link:
+    fontFamily: "\"Cal Sans\", \"Avenir Next\", \"Segoe UI\", system-ui, sans-serif"
+    fontSize: "clamp(19px, 5.2vw, 22px)"
+    fontWeight: 400
+    lineHeight: 1.2
   wordmark:
-    fontFamily: "ui-rounded, \"SF Pro Rounded\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
+    fontFamily: "\"Cal Sans\", \"Avenir Next\", \"Segoe UI\", system-ui, sans-serif"
     fontSize: "21px"
-    fontWeight: 900
-  wordmark-sub:
-    fontFamily: "ui-rounded, \"SF Pro Rounded\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
-    fontSize: "10.5px"
-    fontWeight: 800
-  wordmark-sub-tablet:
-    fontFamily: "ui-rounded, \"SF Pro Rounded\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
-    fontSize: "11px"
-    fontWeight: 800
-  phone-small:
-    fontFamily: "ui-rounded, \"SF Pro Rounded\", system-ui, -apple-system, \"Segoe UI\", sans-serif"
-    fontSize: "14px"
-    fontWeight: 900
-  small:
-    fontFamily: "system-ui, -apple-system, \"Segoe UI\", \"Helvetica Neue\", Arial, sans-serif"
-    fontSize: "15px"
-    fontWeight: 700
-  lead:
-    fontFamily: "system-ui, -apple-system, \"Segoe UI\", \"Helvetica Neue\", Arial, sans-serif"
+    fontWeight: 400
+    lineHeight: 1
+    letterSpacing: "0.01em"
+  wordmark-lg:
+    fontFamily: "\"Cal Sans\", \"Avenir Next\", \"Segoe UI\", system-ui, sans-serif"
+    fontSize: "24px"
+    fontWeight: 400
+    lineHeight: 1
+    letterSpacing: "0.01em"
+  step-title:
+    fontFamily: "\"Cal Sans\", \"Avenir Next\", \"Segoe UI\", system-ui, sans-serif"
+    fontSize: "21px"
+    fontWeight: 400
+    lineHeight: 1.2
+  step-title-lg:
+    fontFamily: "\"Cal Sans\", \"Avenir Next\", \"Segoe UI\", system-ui, sans-serif"
+    fontSize: "22px"
+    fontWeight: 400
+    lineHeight: 1.2
+  small-display:
+    fontFamily: "\"Cal Sans\", \"Avenir Next\", \"Segoe UI\", system-ui, sans-serif"
+    fontSize: "20px"
+    fontWeight: 400
+    lineHeight: 1.2
+  button:
+    fontFamily: "\"Cal Sans\", \"Avenir Next\", \"Segoe UI\", system-ui, sans-serif"
     fontSize: "18px"
     fontWeight: 400
+    lineHeight: 1
+  label:
+    fontFamily: "\"Cal Sans\", \"Avenir Next\", \"Segoe UI\", system-ui, sans-serif"
+    fontSize: "17px"
+    fontWeight: 400
+    lineHeight: 1.2
+  phone-header:
+    fontFamily: "\"Cal Sans\", \"Avenir Next\", \"Segoe UI\", system-ui, sans-serif"
+    fontSize: "17px"
+    fontWeight: 400
+    lineHeight: 1
+  promise:
+    fontFamily: "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Helvetica Neue\", Arial, sans-serif"
+    fontSize: "clamp(17px, 4.7vw, 20px)"
+    fontWeight: 400
+    lineHeight: 1.5
+  lede:
+    fontFamily: "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Helvetica Neue\", Arial, sans-serif"
+    fontSize: "clamp(17px, 4.6vw, 19px)"
+    fontWeight: 400
+    lineHeight: 1.7
+  body:
+    fontFamily: "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Helvetica Neue\", Arial, sans-serif"
+    fontSize: "16px"
+    fontWeight: 400
+    lineHeight: 1.7
+  input:
+    fontFamily: "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Helvetica Neue\", Arial, sans-serif"
+    fontSize: "16px"
+    fontWeight: 400
+    lineHeight: 1.4
+  small:
+    fontFamily: "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Helvetica Neue\", Arial, sans-serif"
+    fontSize: "15px"
+    fontWeight: 400
+    lineHeight: 1.4
+  eyebrow:
+    fontFamily: "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Helvetica Neue\", Arial, sans-serif"
+    fontSize: "14px"
+    fontWeight: 500
+    lineHeight: 1
+    letterSpacing: "0.02em"
+  micro:
+    fontFamily: "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Helvetica Neue\", Arial, sans-serif"
+    fontSize: "14px"
+    fontWeight: 600
+    lineHeight: 1
+  tagline:
+    fontFamily: "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Helvetica Neue\", Arial, sans-serif"
+    fontSize: "10.5px"
+    fontWeight: 600
+    lineHeight: 1
+    letterSpacing: "0.08em"
+  tagline-lg:
+    fontFamily: "-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Helvetica Neue\", Arial, sans-serif"
+    fontSize: "11px"
+    fontWeight: 600
+    lineHeight: 1
+    letterSpacing: "0.08em"
 rounded:
-  pill: "999px"
-  panel: "18px"
-  field: "14px"
-  mark: "10px"
-  inner: "12px"
   focus: "6px"
+  field: "10px"
+  mark: "12px"
+  mark-lg: "14px"
+  card: "24px"
+  circle: "50%"
+  pill: "999px"
 spacing:
-  gutter-phone: "16px"
-  gutter-tablet: "28px"
-  gutter-desktop: "40px"
-  field-gap: "20px"
-  tap: "44px"
-  container: "1180px"
+  gutter: "20px"
+  gutter-lg: "40px"
+  section: "64px"
+  section-lg: "96px"
+  hero-top: "56px"
+  hero-bottom-lg: "112px"
+  container: "1160px"
 components:
   button-primary:
-    backgroundColor: "{colors.orange-deep}"
-    textColor: "{colors.paper}"
+    backgroundColor: "{colors.gold}"
+    textColor: "{colors.ink}"
     typography: "{typography.button}"
     rounded: "{rounded.pill}"
-    padding: "10px 24px"
+    padding: "0 26px"
     height: "56px"
   button-primary-hover:
-    backgroundColor: "#a24707"
+    backgroundColor: "{colors.gold-2}"
+    textColor: "{colors.ink}"
   button-ghost:
     backgroundColor: "transparent"
-    textColor: "{colors.plum}"
+    textColor: "{colors.on-dark}"
     typography: "{typography.button}"
     rounded: "{rounded.pill}"
-    padding: "10px 24px"
+    padding: "0 26px"
     height: "56px"
   button-ghost-hover:
-    backgroundColor: "{colors.plum}"
-    textColor: "{colors.cream}"
-  button-facebook:
-    backgroundColor: "{colors.cream}"
-    textColor: "{colors.teal-ink}"
+    backgroundColor: "{colors.white-wash-10}"
+    textColor: "{colors.on-dark}"
+  button-line:
+    backgroundColor: "transparent"
+    textColor: "{colors.ink}"
+    typography: "{typography.button}"
     rounded: "{rounded.pill}"
-    padding: "10px 22px"
-    height: "60px"
-  button-facebook-hover:
-    backgroundColor: "{colors.gold}"
-    textColor: "{colors.plum}"
+    padding: "0 26px"
+    height: "56px"
+  card:
+    backgroundColor: "{colors.card}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.card}"
+    padding: "clamp(22px, 6vw, 36px)"
   input:
-    backgroundColor: "{colors.paper}"
+    backgroundColor: "{colors.field}"
+    textColor: "{colors.ink}"
+    typography: "{typography.input}"
+    rounded: "{rounded.field}"
+    padding: "13px 14px"
+    height: "52px"
+  chip:
+    backgroundColor: "{colors.field}"
     textColor: "{colors.ink}"
     typography: "{typography.body}"
-    rounded: "{rounded.field}"
-    padding: "14px 16px"
-    height: "54px"
-  chip:
-    backgroundColor: "{colors.paper}"
-    textColor: "{colors.ink}"
     rounded: "{rounded.pill}"
-    padding: "0 16px"
+    padding: "0 18px"
     height: "48px"
   chip-selected:
-    backgroundColor: "{colors.plum}"
-    textColor: "{colors.cream}"
-  service-row-arrow:
-    backgroundColor: "rgba(51,34,63,.08)"
-    textColor: "{colors.plum}"
+    backgroundColor: "{colors.ink}"
+    textColor: "{colors.card}"
+  eyebrow:
+    backgroundColor: "{colors.ink-wash}"
+    textColor: "{colors.ink}"
+    typography: "{typography.eyebrow}"
     rounded: "{rounded.pill}"
+    padding: "9px 14px"
+  eyebrow-on-dark:
+    backgroundColor: "{colors.white-wash-12}"
+    textColor: "{colors.on-dark}"
+  row-arrow:
+    backgroundColor: "{colors.ink-wash-2}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.circle}"
     size: "44px"
-  service-row-arrow-hover:
-    backgroundColor: "{colors.orange-deep}"
-    textColor: "{colors.paper}"
+  row-arrow-hover:
+    backgroundColor: "{colors.gold}"
+    textColor: "{colors.ink}"
+  facebook-link:
+    backgroundColor: "{colors.navy}"
+    textColor: "{colors.on-dark}"
+    typography: "{typography.title-link}"
+    rounded: "{rounded.card}"
+    padding: "14px 16px 14px 22px"
+    height: "76px"
   step-number:
-    textColor: "{colors.plum}"
-    size: "56px"
-  swatch:
-    rounded: "{rounded.pill}"
-    size: "44px"
+    backgroundColor: "{colors.gold}"
+    textColor: "{colors.ink}"
+    typography: "{typography.small-display}"
+    rounded: "{rounded.circle}"
+    size: "48px"
+  float-circle:
+    backgroundColor: "{colors.gold}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.circle}"
+    size: "60px"
 ---
 
 # Design System: Jersey colors and floors LLC
 
 ## Overview
 
-**Creative North Star: "The Logo's Own Street"**
+**Creative North Star: "The Calm Band"**
 
-Everything on the page comes out of the client's Facebook logo: a cream ground, a thick rounded plum roofline, a gold brush, orange/gold/teal rainbow arches, clapboard siding and a green lawn. The hero is that house drawn in canvas, and a visitor can paint it. Under the hero the page is a stack of flat full-bleed color bands (cream, plum, teal, cream, plum). Wet, ragged brush edges join the bands, never straight lines. Type is heavy, uppercase and rounded, the same weight as the logo's wordmark.
+The page is a stack of full-width colour bands, each one a section, alternating light (warm paper, the logo's cream) and dark (mid plum, deep plum with a faint diagonal line texture). The colour change is the section divider; there are no rules, frames or decorative dividers between bands. Inside each band the content is quiet and orderly: one heading, a short lede, then a single list, card or form. This is Ellie's house calm band style, carried here in the logo's own colours.
 
-Single file (`index.html`), no framework, no webfonts, no tracking. It is built for a phone inside Facebook's in-app browser. Desktop keeps the same flow and puts the copy on the left with the house on the right.
+Brush gold is the only warm accent and it appears as a fill: the primary pill button, the numbered step discs, the floating text circle, the hover state of round arrow buttons, and the small dot inside the eyebrow pill. Headings speak in Cal Sans at regular weight; running text is the system stack at a comfortable 16/1.7. Motion is limited to three things: the hero H1 letter bounce-in, one 12px fade-up for content below the first screen, and the floating circle sliding in.
+
+The earlier paint-the-house world (ui-rounded type, lawn, roof and paint-key colours) was replaced on 2026-10-19 and is not part of this system.
 
 **Key Characteristics:**
-- Logo palette only. The page ground is never black.
-- Heavy uppercase system display type (weight 900) over plain system body text.
-- Flat color bands joined by generated brush seams.
-- Pills and organic blobs. No square cards, no card grid.
-- One live signature, the paintable house. Everything else is quiet.
+- Full-width light and dark bands; the band change is the only section divider.
+- One accent, brush gold, used as fill only; gold-ink carries gold as text on light.
+- Teal is reserved for form hover and focus, never decoration.
+- Cal Sans 400 display over a system-stack body at 16/1.7.
+- Big soft corners on cards (24px), full pills on buttons and chips, soft 10px fields with no visible border at rest.
+- Flat surfaces; only two floating objects cast a shadow.
 
 ## Colors
 
-A warm, saturated logo palette on a cream ground. Plum carries text and the dark bands, and orange is the action color.
+The logo's palette mapped onto calm band roles: warm neutrals for light bands, two plums for dark bands, one gold.
 
 ### Primary
-- **Brushed Plum** (`plum`): headlines on cream, the "How a job goes" and closing bands, ghost-button stroke, selected chips. **Plum Deep** (`plum-deep`) is used only for the footer.
-- **Burnt Orange** (`orange-deep`): the one filled action color (primary buttons, the hovered row arrow). **Orange Text** (`orange-text`) is the darker orange for orange type on cream (the second line of the headline, the wordmark subline, the header phone icon). Use it for any orange text. `orange-deep` is only for fills.
+- **Brush Gold** (gold): the single accent. Primary button fill, step-number discs, floating circle, arrow-button hover, eyebrow dot, the selected-chip "just tapped" ring, text selection, and the accent phrase in the hero H1 on plum. Text on gold is always ink.
+- **Gold Light** (gold-2): hover fill of the primary button only.
+- **Gold Ink** (gold-ink): gold used as text on light grounds: the accent phrase in headings on paper or cream, the highlighted words in the work quote, the header phone icon, and the header phone hover.
 
 ### Secondary
-- **Arch Teal** (`teal`): the "Our work" band. It is also the focus color (`focus`) and the caret color. **Teal Ink** (`teal-ink`) is the text on the cream Facebook button.
-
-### Tertiary
-- **Brush Gold** (`gold`): text selection, the gold half of the closing headline on plum, Facebook-button hover, the first step number. On teal, the quote highlight uses a lighter gold (#ffd36b).
-
-### Paint key (service colors)
-A fixed color for each service, repeated as the row dot, the form chip dot and the hero swatch. Keep the mapping when you edit:
-- Interior painting = `paint-teal`, Exterior painting = `paint-gold`, Siding & trim = `paint-orange`, Floors = `floor-brown`, Home remodeling = `plum`.
-- Hero swatches: `paint-teal`, `paint-gold`, `paint-orange`, `paint-cream`.
-- Step numbers: gold, #e9884a, #7fc1c0 (one each, in that order).
-
-### Scene colors
-Used only in the canvas and seams: `arch-orange` / `gold` / #1d6b74 for the arches, `roof-plum` for the roof, shutters, chimney and bristle base, `trim-cream` for trim, corner boards, frames and the vent ring, and `lawn` for the bottom of the lawn gradient (#93a95a to #6f8a3e to `lawn`). The first seam starts from `lawn`.
+- **Form Teal** (teal): input caret, field and chip hover borders, focus border on fields, and the 3px focus ring on light grounds. It distinguishes interaction from the gold fill.
 
 ### Neutral
-- **Logo Cream** (`cream`): page ground, the hero sky, the services and quote bands, and the theme-color. It is sampled from the logo.
-- **Paper** (`paper`): input, chip and success-panel fills, and text on orange.
-- **Ink** (`ink`) / **Ink Soft** (`ink-soft`): body text and secondary text on cream (promise, help, "(optional)").
-- **On-plum Soft** (`on-plum-soft`): paragraph text on plum bands. On teal the cite uses #cfe3e2, and the footer body text is #c9b7c9.
-- **Line** (`line`): hairlines between service rows. **Field Border** (`field-border`): resting stroke on inputs and chips.
-- Errors: #9a2b0c for message text, #b33a12 for the invalid field border.
+- **Warm Paper** (paper): page ground, header, and the light "What we do" and "Our work" bands. Also the browser theme colour.
+- **Logo Cream** (cream): the quote band; the logo's own background colour.
+- **Card White** (card): the work quote card and the quote form card; also the H1 colour on plum and selected-chip text.
+- **Field Sand** (field): input, textarea, chip and message-preview backgrounds on the white form card.
+- **Plum Ink** (ink): headings and strong text on light, text on gold, selected-chip fill.
+- **Plum Body** (body): running text on light.
+- **Plum Soft** (soft): secondary text, ledes, captions, placeholders, the header language toggle and tagline.
+- **Mid Plum** (navy): the hero and closing bands, and the Facebook link card.
+- **Deep Plum** (deep): the "How a job goes" band and the footer, always with the line texture.
+- **On Dark** (on-dark): headings, links and button text on plum.
+- **On Dark Soft** (on-dark-soft): running text on plum.
+- **Hairline** (line): the 1px rule between service rows, the only line in the system.
+- **Ink washes** (ink-wash, ink-wash-2): the eyebrow pill ground and the resting arrow-disc ground on light.
+- **Ink Outline** (ink-outline): 2px border of the outlined button on light.
+- **On-dark Outline** (on-dark-outline): 2px border of the ghost button on plum.
+- **White washes** (white-wash-10, white-wash-12, white-wash-14): ghost-button hover, eyebrow on plum, and the arrow disc inside the Facebook card.
+- **Texture Line** (texture-line): the 1px diagonal line of the dark-band texture.
+- **Shadow tints** (shadow-float, shadow-logo): plum-black shadow colours for the two floating objects (see Elevation).
+- **Error Red** (error): field error border and error message text.
 
-**The Logo Palette Rule.** Every new color has to come from the logo's plum, orange, gold, teal, cream or lawn, or be a tint or shade of one of them. No black ground, no gray UI chrome.
+### Named Rules
+**The Gold Is a Fill Rule.** Gold (#f2b322 family) never sets text on a light ground; it fills shapes, and text on it is ink. When gold must be read as text on paper, cream or white, use gold-ink. On plum, gold may colour the accent phrase, the big phone icon and link hovers.
 
-**The Two Oranges Rule.** `orange-deep` is for fills and `orange-text` is for type on cream. Don't put `arch-orange` behind text.
+**The Teal Means Interaction Rule.** Teal appears only when the visitor is interacting with the form or focusing a control on light. It never fills a surface.
+
+**The Never Black Rule.** The darkest ground is deep plum; the page is never black and text is never pure black.
 
 ## Typography
 
-**Display Font:** `ui-rounded` (SF Pro Rounded on Apple devices), falling back to the system heavy sans.
-**Body Font:** system-ui stack (`-apple-system`, Segoe UI, Helvetica Neue, Arial).
+**Display Font:** Cal Sans (Google Fonts, `family=Cal+Sans&display=swap` with preconnect), falling back to Avenir Next, Segoe UI, system-ui
+**Body Font:** the system stack (-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial)
 
-**Character:** Rounded, very heavy uppercase that echoes the logo wordmark, set tight (line-height .98, -.02em) over a plain, readable system body.
+**Character:** A friendly, geometric display face at regular weight carries every heading, button, label and phone number; the body stays native and unobtrusive so the headings do the talking.
 
 ### Hierarchy
-- **Display** (900, clamp(46px,14vw,104px), .98, uppercase): the hero headline only. It breaks into two lines, plum then `orange-text`.
-- **Closing display** (900, clamp(38px,11vw,84px)): the business name in the plum closing band, with its second half in gold.
-- **Headline** (900, clamp(34px,9vw,60px), .98, uppercase): every section h2.
-- **Title** (900, clamp(22px,6.2vw,32px), 1.05, uppercase): service row names. Step titles use clamp(22px,6vw,28px).
-- **Quote** (800, clamp(24px,6.6vw,40px), 1.15, sentence case): the latest-post quote in the teal band. It grows to clamp(24px,3.6vw,52px) at 1024px and up.
-- **Body** (400, 17px, 1.55): all running text. The hero promise uses clamp(17px,4.6vw,20px) at 34ch, step text 40ch, closing text 18px at 42ch.
-- **Label** (800, 16px, 1.2, uppercase, .03em): form labels and the legend. "(optional)" drops to body 14px, not uppercase, in `ink-soft`.
-- **Button** (900, 17px, 1.12, uppercase, .02em). The send button uses 18px.
+- **Display** (Cal Sans 400, 42px to 80px fluid, line-height 1.02, max 12ch): the hero H1 only, in white on mid plum with its last phrase in gold. Landscape phones pin it at 52px so the buttons stay on the first screen.
+- **Phone Display** (Cal Sans 400, 30px to 52px fluid, line-height 1): the big tap-to-call number in the closing band.
+- **Headline** (Cal Sans 400, 30px to 48px fluid, line-height 1.08, -0.005em, balanced wrap): every section H2.
+- **Quote** (Cal Sans 400, 24px to 34px fluid, line-height 1.2): the latest-post quote on the work card.
+- **Title** (Cal Sans 400, 21px to 26px fluid, line-height 1.15): service row names. The Facebook link card uses a smaller title (19px to 22px).
+- **Step / small display** (Cal Sans 400, 20 to 24px): step titles (21px, 22px on desktop), step numbers and footer name (20px), header wordmark (21px, 24px on desktop).
+- **Button** (Cal Sans 400, 18px, line-height 1): all pill buttons.
+- **Label** (Cal Sans 400, 17px, line-height 1.2): form labels and legends; the header phone number is 17px (16px under 390px, 20px on desktop).
+- **Promise / Lede** (system 400, 17px to 20px and 17px to 19px fluid): the hero promise (line-height 1.5, 32ch) and section ledes (soft colour, 38ch).
+- **Body** (system 400, 16px, line-height 1.7): all running text. Inputs are 16px at 1.4 so iOS never zooms.
+- **Small** (system 400, 15px): captions, error messages, the after-send note and the message preview.
+- **Eyebrow** (system 500, 14px, 0.02em): the eyebrow pill label.
+- **Micro** (system 600, 14px): the ES language toggle; field hints and footer small print are 14px regular.
+- **Tagline** (system 600, 10.5px, 11px on desktop, 0.08em, uppercase): "and Floors LLC" under the wordmark only; hidden under 390px.
 
-**The System Font Rule (owner).** No webfonts, ever. Display type is `ui-rounded` with a system fallback. On non-Apple devices it falls back to plain system heavy. That is accepted, so don't add an `@font-face` to fix it.
+### Named Rules
+**The Regular Weight Rule.** Cal Sans is only ever set at 400. Hierarchy comes from size, not weight.
 
-**The Heavy Caps Rule.** Display, headline, title, label and button text are uppercase in the display stack at 800-900. Body and inputs stay in sentence case in the body stack.
+**The One Display Face Rule.** Cal Sans is the single webfont. Everything that is not a heading, button, label or phone number is the system stack.
 
 ## Layout
 
-- **Container:** `.wrap` is 1180px max with side gutters of 16px (phone), 28px (600px and up) and 40px (1024px and up).
-- **Breakpoints:** 600px (CTAs side by side, steps in 3 columns, seams 48px, the ES toggle reads "Español"), 1024px (two-pane hero, services in 2 columns, quote form in a 5fr/7fr grid), plus small-phone fallbacks at 380px and below (smaller hint) and 350px and below (no wordmark subline, no phone icon, no hint).
-- **Band rhythm:** about 36-44px top padding and 52-60px bottom. Order is hero (cream sky, lawn at the bottom), services (cream), how (plum), work (teal), quote (cream), close (plum), footer (plum-deep).
-- **Hero:** on a phone, the copy block stacks over the scene, which is clamp(340px,100vw,440px) tall. On desktop the hero is min(820px, 100svh - 64px) tall, the scene fills it from behind, and the copy sits left at max min(640px,44vw) on clear cream sky.
-- **Tap targets:** 44px minimum everywhere (header items, footer links, swatches, row arrows). Buttons are 56px and chips 48px.
-- **Form:** one column at max 560px, 20px between fields.
+A single centred column (max 1160px) with a 20px gutter on phones and 40px from 760px. Bands are full-bleed; sections pad 64px top and bottom on phones and 96px from 760px. The hero pads 56px/64px on phones and 96px/112px on desktop, tightened to 32px/40px on landscape phones.
+
+Content blocks cap their own width: section heads at 640px, the work card and Facebook link at 640px, the form at 600px. At 760px the hero buttons sit side by side (min 230px each) and services become two columns with a 56px gap. At 1024px the hero adds the full logo on a 340px card to the right, the work, quote and closing bands split into two columns (64px or 48px gaps), the quote heading becomes sticky, and the three steps sit in a row.
+
+Rhythm inside blocks is 8 to 32px: 16px head gaps, 20px hero copy gap, 22px between form fields, 24px between steps, 32 to 36px from a head to its list.
+
+**The Band Is the Divider Rule.** Sections are separated by a change of band colour, never by a rule, border or ornament. The only hairline is between service rows.
 
 ## Elevation & Depth
 
-The bands are flat and depth lives in the illustration. UI shadows are soft and colored, always blurred with a negative spread and never offset hard.
+The system is flat. Bands, cards, fields and buttons sit on the ground with no shadow; depth comes from the light/dark band alternation and white cards on cream or paper. Exactly two objects float and cast a soft plum shadow.
 
 ### Shadow Vocabulary
-- **Orange lift** (`0 8px 18px -10px rgba(185,82,10,.8)`): primary buttons only.
-- **Dark lift** (`0 10px 22px -12px rgba(0,0,0,.6)`): the Facebook button on teal.
-- **Swatch drop** (`0 4px 10px -4px rgba(20,12,24,.55)`). Selected adds a cream halo: `0 0 0 3px var(--cream), 0 6px 14px -4px rgba(20,12,24,.6)`.
-- **Paint bead** (`inset 0 -2px 3px rgba(0,0,0,.18)`): row dots and chip dots read as drops of paint.
-- **Focus glow** (`0 0 0 3px rgba(14,90,100,.22)`): inputs and chips on hover and focus.
-- **Hint legibility** (`text-shadow: 0 1px 3px rgba(20,28,8,.8)`): cream "Drag to paint" text over the lawn.
+- **Float shadow** (`box-shadow: 0 10px 28px rgba(39,26,50,.32)`): the floating text circle, the only fixed element.
+- **Logo lift** (`box-shadow: 0 24px 60px rgba(20,10,30,.35)`): the 340px desktop logo card in the hero.
+- **Tap ring** (`box-shadow: 0 0 0 3px #f2b322`): a gold ring on a chip at the moment it is selected; a state cue, not elevation.
 
-**The Flat Bands Rule.** Section backgrounds never get gradients, textures or shadows. The canvas is the only rendered surface.
+**The Two Floaters Rule.** Only the floating circle and the hero logo cast shadows. Cards, buttons and fields stay flat.
+
+The dark-band texture is part of the material, not elevation: a 135deg repeating line, 1px of texture-line every 23px (`repeating-linear-gradient(135deg,transparent 0 22px,rgba(255,255,255,.035) 22px 23px)`), on the hero, the "How a job goes" band and the footer. Ellie's house style keeps it at about 4% white or fainter so it reads as grain, not stripes.
 
 ## Shapes
 
-- **Pills** (`pill`) for every button, chip, swatch and row arrow.
-- **Organic blobs:** row dots (`50% 46% 52% 48%`) and step numbers (`52% 48% 50% 46%`) are slightly uneven circles, like dabs of paint. Keep them uneven.
-- **Soft rectangles:** fields at `field`, the success panel at `panel` (its message box at 12px), the brand mark at `mark`, and the focus ring outline at 6px.
-- **Brush seams:** ragged horizontal edges between bands (see Components). Bands never meet on a straight line.
-- **Strokes:** buttons 2.5px, fields and chips 2px, focus outline 3px with a 3px offset.
+Soft and generous. Containers use big 24px corners; every button, chip and the eyebrow is a full pill (999px); round controls (arrow discs, step numbers, the floating circle) are true circles. Fields use a gentler 10px corner and have no visible border at rest: a 2px transparent border that turns teal on hover and focus. The logo mark is 12px (14px on desktop), and focus rings carry a 6px radius.
+
+**The No Visible Border Rule.** Fields, chips and cards have no resting stroke. Borders appear only as state (teal hover/focus, red error) or as the outline of the two outlined button variants.
 
 ## Components
 
-### Header
-Not sticky (`position: relative`). On cream: brand mark (42px, `mark` radius) plus a two-line wordmark ("JERSEY" 900 21px/24px in `ink`, "COLORS AND FLOORS" 800 10.5px/11px in `orange-text`). Then the language toggle (800 14px, `ink-soft`, underlined, teal on hover, "ES" on phones and "Español" at 600px and up), then the tap-to-call number (900 15.5px, 18px on desktop, `plum`, phone icon in `orange-text`, orange on hover). The wordmark subline belongs to the logo lockup and is not a style for section labels.
-
 ### Buttons
-- **Primary:** `button-primary` with a 2.5px border in its fill color, the orange lift shadow, and an optional 20px inline SVG icon. It moves down 1px on active.
-- **Ghost:** transparent with a 2.5px plum stroke, filling plum with cream text on hover.
-- **Facebook:** cream pill on teal with the Facebook glyph (24px). It fills gold with plum text on hover and becomes inline-flex at 1024px and up.
-- **Hero CTAs:** stacked full width on phones, side by side at 600px and up. Get a quote is primary, Text us a photo is ghost.
-- **Send:** a full-width primary button. On hover and focus it gets the 3px teal outline (form rule).
-- Transitions: color properties .2s, transform .15s.
+Confident, tactile pills.
+- **Shape:** full pill (999px), 56px tall, 26px side padding, Cal Sans 18px, optional 20px icon with a 10px gap.
+- **Primary:** gold fill with ink text and a gold 2px border; hover lightens to gold-2. In the form it is full width.
+- **Ghost (on plum):** transparent with on-dark text and a 70% on-dark 2px outline; hover goes full white outline over a 10% white wash.
+- **Line (on light):** transparent with ink text and a 55% ink 2px outline; hover turns the outline teal.
+- **Press:** scales to 0.98. Hover styles only apply under `(hover:hover)`.
+
+### Chips
+- **Style:** field-sand pill, 48px tall, 18px padding (14px under 380px), system 16px ink text, no resting border.
+- **State:** hover border teal; selected fills ink with white text and a drawn check mark; the moment of selection adds a 3px gold ring; press scales to 0.97. Keyboard focus shows the 3px teal ring.
+
+### Cards / Containers
+- **Corner Style:** 24px.
+- **Background:** white on paper or cream.
+- **Shadow Strategy:** flat (see Elevation).
+- **Border:** none.
+- **Internal Padding:** fluid 22px to 36px for the work card, 20px to 32px for the form card.
+- **Facebook link card:** a mid-plum 24px card, 76px tall, with the Facebook glyph, a Cal Sans title and a round arrow disc at the right.
+
+### Inputs / Fields
+- **Style:** field-sand fill, 10px corners, 2px transparent border, 52px min height (textarea 110px), 13px/14px padding, 16px system text, soft-colour placeholder.
+- **Focus:** the border turns teal; no glow.
+- **Error:** border and 15px message in error red.
+
+### Navigation
+A paper header, 68px tall on phones and 80px on desktop: the 44px logo mark (52px desktop) with the Cal Sans wordmark and uppercase tagline on the left; on the right an underlined "ES"/"Español" toggle in soft 14px (ink on hover) and the tap-to-call number in Cal Sans with a gold-ink phone icon. Every target is at least 44px. The footer is deep plum with texture, a Cal Sans name, and on-dark links that turn gold on hover.
 
 ### Service rows
-Full-width `sms:` links in a list with `line` hairlines (2 columns with a 60px gap at 1024px and up, each row with its own top rule). The row is a paint-key dot (16px), the uppercase title, and a 44px round arrow. Rows are 72px tall, 84px on desktop.
-**The Arrow-Only Rule (owner).** Hover and focus never tint, outline or shadow the row. Only the arrow responds: it fills `orange-deep` with `paper` icon and moves `translateX(3px)`, and on keyboard focus the 3px teal outline goes on the arrow.
+A list of full-width rows split by hairlines (two columns from 760px). Each row is a Cal Sans title with a 44px round arrow disc on a 7% ink wash; hover and focus fill the disc gold and nudge the arrow 3px right.
 
 ### Steps
-A numbered list on plum, one column on phones (56px number spanning two rows next to the title and text) and three equal columns at 600px and up (number above). The number is a 56px organic blob in a step color with a 900 28px plum numeral. Titles are uppercase in cream, text in `on-plum-soft`.
+Numbered steps on deep plum: a 48px gold disc with the number in Cal Sans 20px, then a Cal Sans step title and on-dark-soft body.
 
-### Chips and form
-- **Inputs / select / textarea:** `input` with a 2px `field-border` stroke. The select uses a custom plum chevron at 20px, 14px from the right. The textarea is 110px minimum and resizes vertically. Placeholder is #7d6b80, caret teal.
-- **Chips:** checkbox pills, with the real input visually hidden. Each has a 12px paint-key dot before the label (700 16px body). Checked is `chip-selected`.
-- **The Outlined Controls Rule (owner).** Every form control (field, select, textarea, chip) shows the teal `focus` border plus the focus glow on **hover and on focus alike**. A checked chip keeps its plum fill and only swaps its border to teal. Never signal hover by changing the background.
-- **Errors:** message text below the field (700 15px, #9a2b0c), hidden when empty. The invalid border is #b33a12.
-- **Success panel:** `paper` panel, `panel` radius, 2px teal-tint border (rgba(14,90,100,.35)). It shows the composed message in a cream box with a small ghost "Copy message" button and an "Or call us" link.
+### Eyebrow pill (owner's house feature)
+A small label pill above the hero H1 and a few key section headings (three on this page: hero, services, quote). System 14px/500 ink text on a 6% ink wash (on plum: on-dark text on a 12% white wash), 9px/14px padding, with a 7px gold dot before the text. Ellie chose this pill for her calm band style on 2026-10-19 knowing Impeccable's craft floor bans eyebrows; it is kept as her deliberate exception, under her own limits: never above every heading, no arrow, no hover state, no shadow, never a full-strength gold fill, so it can't be read as a button.
 
-### Seams (painted section edges)
-Empty `div.seam` elements between bands, 34px tall (48px at 600px and up). Each one carries `data-from` (the band above) and `data-to` (the band below). JS builds an SVG with a 1200×48 viewBox and `preserveAspectRatio=none`, with an edge along y≈24 made of two sines (±5, ±2.5) plus seeded jitter (±2.5). Seams that are below the fold at load get brushed in left to right over 1100ms (expo-out) when 60% visible. When you add or reorder a band, update both data attributes to match the hex values of the neighboring backgrounds. Seeds are `97 + index×31`, so inserting a seam reshuffles the shape of every seam after it.
+### Floating text circle (owner's house feature)
+A single 60px gold circle fixed 16px from the bottom-right (plus safe area) with a 26px ink chat icon; it opens a pre-filled `sms:` message. It slides up from 120px below (0.22s out, 0.35s in, `cubic-bezier(.2,.8,.2,1)`), carries the float shadow, presses to 0.94, and hides while the quote form is on screen. One circle, never a bottom bar.
 
-### Hero canvas scene (signature)
-A single `<canvas>` drawn in **scene coordinates 800×640**, with the ground line at y 520. On phones the house is scaled by min(width/600, height/640) and centered. When the canvas is 1000px or wider it is scaled by min(height/670, width×0.42/560) and centered at 74.5% of the width. It is always bottom-aligned, with DPR capped at 1.75.
+### Hero H1 bounce-in (owner's house feature)
+Each letter of the hero H1 slides in from 50px right with an overshoot, over 1s on `cubic-bezier(.34,1.56,.64,1)`, 20ms apart. JS-only, so no-JS and reduced motion show the plain heading.
 
-Layers, composited every frame in this order:
-1. **Base** (offscreen, redrawn on resize): full-width lawn gradient, the three logo arches (`arch-orange`, `gold`, #1d6b74, radii 292/263/234, 29px stroke, soft drop shadow), the walkway, and the weathered gray siding (#c9bca6 with seeded blotches and peeling flecks).
-2. **Paint** (offscreen, 2× scene resolution, in scene coordinates so resizes don't wipe it): bristle strokes clipped to the wall shape.
-3. **Over** (offscreen): clapboard laps every 18px (shadow, lap line, highlight) that also shade the fresh paint, eave shadow, side shading, corner boards, two shuttered windows, the plum door with a gold knob, the attic vent, the roof as a 36px round-capped `roof-plum` stroke, the chimney, and the bushes.
-4. **Brush** (on screen): gold handle, dark ferrule, and bristles dipped in the current color. It tilts with horizontal velocity and replaces the cursor (`cursor:none`).
-
-Tunables (top of the hero script):
-- `AUTO_SPEED` 560: autopilot brush speed in scene px/s.
-- `ROW` 20: spacing between autopilot rows. Smaller means denser coats.
-- `BRUSH_W` 32: stripe width. `BRISTLES` 22: bristle count. More bristles give a smoother, less streaky stripe.
-- `IDLE_RESUME` 3200ms: how long after the visitor stops before autopilot takes over again.
-- `PASS_PAUSE` 900ms: pause between coats. Each finished coat moves to the next swatch color.
-- `STIFF` 260 / `DAMP` 26: the spring the brush follows its target on. Lower stiffness means more lag, and damping above about 2×√STIFF feels heavy.
-- `PAINT_K` 2: paint layer resolution per scene px.
-- `REWARD_AT` 2600: how many scene px the visitor paints before the hint changes to "Looking sharp." / "¡Quedó impecable!".
-- `SW`/`SH` 800×640 and house geometry `G, L, R, T, PEAK, WIN, DOOR`. Moving any of these means redrawing all four layers.
-
-Behavior: autopilot paints back-and-forth rows down the wall. With a mouse, hovering paints. With touch or a pen, painting happens while pressed (pointer capture, `touch-action:none` on the canvas only). The loop stops when the scene is off screen or the tab is hidden. Swatches are a radiogroup of 44px circles over the lawn (bottom left on phones, bottom right on desktop), scaling to 1.12 with a spring ease when selected.
-
-### Brand mark and rasters (provenance)
-- `assets/mark.webp`, `assets/favicon.png`, `assets/apple-touch-icon.png`: crops of the client's Facebook profile logo, fetched 2026-10-18 from facebook.com/profile.php?id=61584889347399 (og:image).
-- `assets/og.jpg`: a headless-Chrome screenshot of this page's own hero at 1200×630.
-- The site has no other rasters and no stock photography. Regenerate `og.jpg` whenever the hero changes.
+### Fade-up
+Content that starts below the first screen rises 12px and fades in over 0.4s on `cubic-bezier(.16,1,.3,1)`; service rows stagger 40ms. Everything is visible at rest without JS, and reduced motion turns it off.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** keep the phone number to **once per screen**: the header carries it, and the footer and success panel are the only other places. The hero gets no extra call button.
-- **Do** keep the paint-key mapping (service to color) the same across row dots, chips and swatches.
-- **Do** place a seam between every pair of differently colored bands, with `data-from`/`data-to` matching the neighbors.
-- **Do** honor reduced motion as built: transitions drop to 0.01ms, smooth scroll turns off, the scene draws one finished coat with no autopilot brush (the visitor can still paint), and seams render complete.
-- **Do** keep every tap target at 44px or more and every focus state visible in teal.
+- **Do** alternate full-width light (paper, cream) and dark (mid plum, textured deep plum) bands and let the colour change divide the sections.
+- **Do** use gold only as a fill with ink text on it, and gold-ink when gold must be read as text on a light ground.
+- **Do** keep teal for form hover, focus and the caret on light; use a gold focus ring on plum.
+- **Do** set every heading, button, label and phone number in Cal Sans 400, and running text in the system stack at 16/1.7.
+- **Do** use 24px corners for cards, full pills for buttons and chips, 10px borderless fields.
+- **Do** keep every tap target at least 44px and inputs at 16px or larger.
+- **Do** honour reduced motion: no bounce-in, no fade-up, no slide, no press scaling.
 
 ### Don't:
-- **Don't** make the header (or any bar) sticky or fixed. That is an owner rule.
-- **Don't** highlight a whole service row on hover or focus. Only the arrow responds.
-- **Don't** show hover on form controls by any means other than the teal outline and glow.
-- **Don't** publish an email address anywhere except the footer. None is known today, so none appears.
-- **Don't** load webfonts or icon fonts. Icons are inline SVG at 16-24px.
-- **Don't** add stock photos, review badges or a service-card grid. The painted house is the image.
-- **Don't** use a black or gray ground. Dark bands are plum.
+- **Don't** use black for the page ground or text; the darkest tone is deep plum.
+- **Don't** set gold (#f2b322) as text on paper, cream or white.
+- **Don't** add shadows to cards, buttons or fields; only the floating circle and the hero logo float.
+- **Don't** put a resting border on fields or chips.
+- **Don't** add more motion than the H1 bounce-in, the one 12px fade-up and the floating circle.
+- **Don't** turn the floating circle into a bottom bar or add a second floating control.
+- **Don't** put an eyebrow pill above every heading, or give it an arrow, hover state, shadow or full gold fill.
+- **Don't** raise the dark-band texture above about 4% white.
